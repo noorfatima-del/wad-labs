@@ -79,10 +79,10 @@ ul {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+.profileimg {
+    width: 250px;
+    height: 250px;
+    border-radius: 360%;
     margin-bottom: 10px;
 }
 
