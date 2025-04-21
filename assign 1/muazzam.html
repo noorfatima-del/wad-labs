@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muazzam A. Khan Khattak</title>
+  <style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9eaeb;
+    padding: 20px;
+    color: rgb(12, 12, 12);
+  }
+  
+  header .logo {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 1.2em;
+  }
+  
+  /* Navbar Styles */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0d1144;
+    padding: 10px;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-left a, .nav-right a {
+    color: rgb(212, 226, 218);
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-left a:hover, .nav-right a:hover {
+    background-color: #290c58;
+  }
+  
+  
+  
+  .page-header {
+    background: linear-gradient(120deg, #5a051f, #6b6757, #0a0552);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page-header h1, .page-header p {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+@media (min-width: 768px) {
+    .projects {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+    
+      .profile-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .profile-header img {
+        width: 200px;
+        border-radius: 8px;
+      }
+      h1, h2, h3 {
+        color: #39085a;
+      }
+      .contact {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .social-icons img {
+        height: 40px;
+        margin-right: 15px;
+      }
+      p, li, .contact {
+        font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333;
+      }
+  /* Footer */
+  footer {
+    background: linear-gradient(120deg, #070555, #6b6757, #58064b);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .footer-column {
+    width: 45%;
+  }
+  
+  .footer-column h4 {
+    margin-top: 0;
+  }
+  
+  .footer-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .footer-list li {
+    margin: 5px 0;
+  }
+  
+  #foot p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .footer-column.useful-links {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000;
+  }
+  
+  .footer-column.useful-links a.footer-link {
+    display: inline-block;
+    background-color: #4d065c;
+    color: white;
+    padding: 6px 12px;
+    margin: 5px 8px 10px 0;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-column.useful-links a.footer-link:hover {
+    background-color: #58073d;
+  }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="container text-center">
+      <h1 class="animate-text">WELCOME TO THE</h1>
+      <h1 class="animate-text">Department of Computer Sciences</h1>
+      <p class="animate-subtext">Quaid-i-Azam University, Islamabad</p>
+    </div>
+  </header>
+
+<div class="navbar-container">
+  <nav class="nav-left">
+    <a href="homepage.html">Home</a>
+    <a href="academics.html">Academics</a>
+    <a href="fundedprojects.html">Funded Projects</a>
+    <a href="research.html">Research</a>
+    <a href="admission.html">Admissions</a>
+    <a href="faculty.html">Faculty</a>
+  </nav>
+
+  <nav class="nav-right">
+    <li><a href="http://www.icet.org.pk/2018/" target="QAU"><b>ICET2018</b></a></li>
+    <a href="https://gdsc.community.dev/quaid-i-azam-university/" target="QAU">Google GDSC</a>
+    <a href="http://jobs.qau.edu.pk/" target="QAU">Jobs</a>
+    <a href="http://alumni.cs.qau.edu.pk/" target="QAU">Alumni</a>
+    <a href="http://www.qau.edu.pk/" target="QAU">QAU</a>
+    
+  </nav>
+ 
+</div>
+<main>
+    <div>
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; color: #0d1144;">Muazzam A. Khan Khattak</h2>
+<p  style="font-family: 'Playfair Display', serif; font-size: 1.0rem; text-align: center; color: #0d1144;">Department of Computer Sciences</p>
+    </div>
+    <div class="profile-container">
+        <h1>Muazzam A. Khan Khattak</h1>
+        <img src="muazzam.png" alt="Profile Picture" style="float: right; width: 20%; max-width: 200px; margin-left: 1.8rem;">
+    
+      
+        <p>
+        
+         <p> Chairperson</p>
+          <p>Professor (Tenured)<p>
+          <p>(Senior Member IEEE)<br>
+            (Member Pakistan Academy of Sciences)<br>
+            (Head Huawei Academy, Quaid-i-Azam University, Islamabad)<br>
+            (Director ICESCO Chair for Big Data Analytics and Edge Computing)<br>
+            (Member Prime Minister Advisory Committee for Establishment of
+            IT Center of Excellence in Pakistan)<br>
+            (Senior Member National Computing Education Accreditation
+            Council)<br>
+            (Member Higher Education Commission, A&amp;A Division for
+            Computing Programs)<br>
+            (Member Asian Council of Science Editors)<br>
+            <br></p>
+
+         
+           
+            
+          📧 <a href="mailto:muazzam.khattak@qau.edu.pk">muazzam.khattak@qau.edu.pk</a><br>
+              ☎ +92-51-9064-2060<br>
+             📯 Dept. of Computer Science,<br><br>
+       <br><br>
+<P>      
+    PhD (Wireless Network)<br>
+    Course Work: International Islamic University Islamabad<br>
+    Research Work: University of Missouri KC, USA.<br>
+    MS: International Islamic University Islamabad.</P>      
+       
+    </div>
+
+         
+        <h2><a name="Research_Interests"></a>Research Interests</h2>
+            <ul>
+              <li>Internet of Things, Internet of Vehicles</li>
+              <li>  Internet of Medical Things</li>
+              <li> Information & Network Security</li>
+              <li>  Multimedia Encryption and Compression</li>
+              <li> Block Chain & IOTA</li>
+
+            </ul>
+
+            
+            <h2><a name="Teaching"></a>Teaching</h2>
+            <ul>
+              <li>PhD/MS/MPhill</li>
+              <ul>
+                <li> Next Generation Networks</li>
+                <li>Theory of Computation</li>
+                <li>Advance Analysis of Algorithms</li>
+                <li>Research Trends in Computer Vision</li>
+                <li>Advance Machine Learning Techniques</li>
+                <li>Special Topics in Image Processing</li>
+                <li>Advances in Intelligent Systems</li>
+              </ul>
+              <li>MSc / BS</li>
+              <ul>
+                <li>Neural Networks</li>
+                <li>Artificial Intelligence</li>
+                <li>Introduction to Digital Image Processing</li>
+                <li>Analysis and Design of Algorithms</li>
+                <li>Operating Systems</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Object Oriented Programming</li>
+              </ul>
+            </ul>
+
+            <h2><a name="Research_Publications"></a>Research
+                Publications</h2>
+              <h3><a name="Journal_"></a>Journal</h3>
+              <ol>
+                <li>M. Kashif, A. Hussain, A. Munir, A.B. Siddiqui, A.A. Abbasi, M. Akif, A.J. Malik, F.E. Alazemi and O.Y. Song, A Machine Learning Approach for Expression Detection in Healthcare Monitoring Systems, Computers, Materials &amp; Continua,67(2): 2123-2139 (2021)</li>
+                <li>J. Khan, M. Fayaz, A. Hussain, S. Khalid, W. K. Mashwani, J. Gwak, An Improved Alpha Beta Filter Using a Deep Extreme Learning Machine. IEEE Access 9: 61548-61564 (2021)</li>
+                <li>A. Rehman, T. Sadad, T. Saba, A. Hussain, U. Tariq, Real-Time Diagnosis System of COVID-19 Using X-Ray Images and Deep Learning. IT Prof. 23(4): 57-62 (2021)</li>
+                <li>M. Asad, A. Hussain, U. Mir, Low complexity hybrid holistic - landmark based approach for face recognition. Multim. Tools Appl. 80(20): 30199-30212 (2021)</li>
+                <li>M.S.I. Malik, A. Hussain, Exploring the influential reviewer, review and product determinants for review helpfulness. Artif. Intell. Rev. 53(1): 407-427 (2020)</li>
+                <li>M.Nadeem, A.Hussain, A.Munir, M.Habib, M.T.Naseem: Removal of random valued impulse noise from grayscale images using quadrant based spatially adaptive fuzzy filter. Signal Process. 169: 107403 (2020).</li>
+                <li>M. Q. Khan, A. Hussain, S. U. Rehman, U. Khan, M. Maqsood, K. Mehmood, M. A. Khan, Classification of Melanoma and Nevus in Digital Images for Diagnosis of Skin Cancer. IEEE Access 7: 90132-90144 (2019).</li>
+                <li>M. T. Naseem, M. Nadeem, I. M. Qureshi, A. Hussain, Optimal Secure Information using Digital Watermarking and Fuzzy Rule base. Multim. Tools Appl. 78(6): 7691-7712 (2019)</li>
+                <li>M. Nadeem, A. Hussain, A. Munir, Fuzzy logic based computational model for speckle noise removal in ultrasound images. Multim. Tools Appl. 78(13): 18531-18548 (2019)</li>
+                <li>T. Sadad, A. Munir, T. Saba, A. Hussain, Fuzzy C-means and region growing based classification of tumor from mammograms using hybrid texture feature. J. Comput. Sci. 29: 34-45 (2018).</li>
+                <li>S. Arshid, A. Hussain, A. Munir, A. Nawaz, S. Aziz, Multi-stage binary patterns for facial expression recognition in real world. Cluster Computing 21(1): 323-331 (2018).</li>
+                <li>M. S. I Malik, A. Hussain, An analysis of review content and reviewer variables that contribute to review helpfulness. Inf. Process. Manage. 54(1): 88-104 (2018).</li>
+                <li>S. A. Khan, A. Hussain, M. Usman, Reliable facial expression recognition for multi-scale images using weber local binary image based cosine transform features. Multimedia Tools Appl. 77(1): 1133-1165 (2018).</li>
+                <li>A. Munir, A. Hussain, S. A. Khan, M. Nadeem, S. Arshid, Illumination invariant facial expression recognition using selected merged binary patterns for real world images, Optik, 158: 1016-1025 (2018).</li>
+                <li>M. M. Tahir, A. Q. Khan, N. Iqbal, A. Hussain, S. Badshah, Enhancing Fault Classification Accuracy of Ball Bearing Using Central Tendency Based Time Domain Features. IEEE Access 5: 72-83 (2017).</li>
+                <li>M. S. I. Malik, A. Hussain, Helpfulness of product reviews as a function of discrete positive and negative emotions. Computers in Human Behavior 73: 290-302 (2017)</li>
+                <li>A. Hussain, M. Habib, A new cluster based adaptive fuzzy switching median filter for impulse noise removal. Multimedia Tools Appl. 76(21): 22001-22018 (2017).</li>
+                <li>M. Sharif, A. Hussain, M. A. Jaffar, T. S. Choi, Fuzzy based hybrid filter for rician noise removal, Signal, Image and Video Processing, 10(2): 215-224 (2016).</li>
+                <li>M. Habib, A. Hussain, S. Rasheed, M. Ali, Adaptive Fuzzy inference system based directional median filter for impulse noise removal, International Journal of Electronics and Communication, 70(5): 689-697 (2016).</li>
+                <li>M. Habib, A. Hussain, T. S. Choi, Adaptive Threshold based Fuzzy Directional Filter Design using Background Information, Applied Soft Computing, 29: 471-478 (2015).</li>
+                <li>S. Akram, M. Y. Javed, A. Hussain, F. Riaz, M. U. Akram, Intensity-based statistical features for classification of lungs CT scan nodules using artificial intelligence techniques, 2015, Journal of Experimental and Theoratical Artificial Intelligence, 27(6): 737-751 (2015).</li>
+                <li>M. Sharif, A. Hussain, M. A. Jaffar, T. S. Choi, Fuzzy similarity based non-local mean filter rician noise removal, Multimedia Tools and Applications, 74(15): 5533-5556 (2015).</li>
+                <li>S. M. Bhatti, A. Hussain, M. A. Jaffar, T. S. Choi, Color Differences based Fuzzy filter for Extremely Corrupted Images, Applied Soft Computing, 21: 107-118 (2014).</li>
+                <li>S. khan, A. Hussain, M. Usman, A. M. Mirza, Robust face recognition using computationally efficient features, Journal of Intelligent and Fuzzy Systems, 27(6): 3131-3143 (2014).</li>
+                <li>M. Bilal, A. Hussain, M. A. Jaffar, T. Choi, A. M. Mirza, Estimation and optimization based ill-posed inverse restoration using fuzzy logic, Multimedia Tools and Applications, 69(3): 1067-1087 (2014).</li>
+                <li>S. M. Bhatti, A. Hussain, M. A. Jaffar, T. S. Choi, Intelligent noise detection and filtering using neuro-fuzzy system. Multimedia Tools and Applications, 63: 93-105 (2013).</li>
+                <li>S. M. Bhatti, A Hussain, M. A.Jaffar, T. S. Choi, Machine Learning and Directional Switching Median based Filter for highly corrupted Images, Knowledge and Information Systems,36(3): 557-577 (2013).</li>
+                <li>A. Hussain, S. M. Bhatti, M. A. Jaffar, Fuzzy based Impulse Noise Reduction Method. Multim. Tools Appl. 60(3): 551-571 (2012)</li>
+                <li>N. Naveed, A. Hussain, M. A. Jaffar, T.S. Choi, Quantum and impulse noise filtering from breast mammogram images. Comput. Methods Programs Biomed. 108(3): 1062-1069 (2012).</li>
+                <li>S. M. Bhatti, A. Hussain, M. A. Jaffar, A M. Mirza, T. S. Choi, Fuzzy Random Impulse Noise Reduction technique based on Statistical Estimator, International Journal of Innovative Computing Information and Control, 7: 3395-3406(2011).</li>
+                <li>M. A. Jaffar, A. M. Mirza, M. A. Iqbal, A. Hussain, R. Baig, Genetic Fuzzy based Automatic Lungs Segmentation from CT scans Images, International Journal of Innovative Computing Information and Control, 7: 1875-1890 (2011).</li>
+                <li>M. Nazir, A. Hussain, M. A. Jaffar, A. M. Mirza, Efficient Gender Classification using Optimization of Hybrid Classifiers based on Genetic Algorithm, International Journal of Innovative Computing Information and Control, (2011).</li>
+                <li>A. B. Siddiqui, M. A. Jaffar, A. Hussain, A. M. Mirza, Block- based Pixel Level Multi-focus Image Fusion using Particle Swarm Optimization, International Journal of Innovative Computing Information and Control, 7: (2011).</li>
+                <li>M. A. Jaffar, M Ishtiaq, B. Ahmed, A. Hussain, N. Naveed, Fuzzy Wavelet-Based Color Image Segmentation using Self-Organizing Map Neural Network, International Journal of Innovative Computing Information and Control, 6: 4813-4824 (2010).</li>
+                <li>A. Hussain, M. A. Jaffar, A. M. Mirza, Random Valued Impulse Noise Removal using Fuzzy Logic, International Journal of Innovative Computing Information and Control, 6: 4273-4288 (2010).</li>
+                <li>A. Hussain, M. A. Jaffar, A. M. Mirza, A Hybrid Image Restoration Approach: Fuzzy Logic and Directional Weighted Median based Uniform Impulse Noise Removal, Knowledge and Information System, 24: 77-90 (2009).</li>
+                <li>M. A. Jaffar, A. Hussain, A. M. Mirza, Fuzzy Entropy based Optimization of Clusters for the Segmentation of Lungs in CT Scanned Images, Knowledge and Information System, 24: 91-111(2009).</li>
+                <li>A. Hussain, M. A. Jaffar, A. Chaudary, A. M. Mirza, Detail Preserving Fuzzy Filter for Impuse Noise Removal, International Journal of Innovative Computing Information and Control, 5: 3583-3591(2009).</li>
+                <li>M. A. Jaffar, A. Hussain, A. M. Mirza, A. Chaudary, Fuzzy Entropy and Morphology based fully automated Segmentation of Lungs from CT Scan Images, International Journal of Innovative Computing Information and Control, 5: 4993-5002 (2009).</li>
+             </ol>
+             
+      <!-- <hr> -->
+<h2><a name="PhD_Students"></a>PhD Students <br></h2>
+
+<h3>Supervised<br>
+</h3>
+
+            
+
+
+            
+<ol>
+  <li>Mr. Asim Munir, "Human Facial Expression Recognition using Computational Intelligence Techniques", 2020</li>
+  <li>Mr. Muhammad Nadeem, "Image Restoration using Adaptive Soft Computing Techniques", 2020</li>
+  <li>Mr. Sajid Ali Khan, "Facial Expression Recognition in unconstrained environment", 2019</li>
+  <li>Mr. Tariq Sadad, "Tumor Detection, Classification and Risk Assessment in Digital Mammograms", 2019</li>
+  <li>Ms. Freeha Anwar, "Online Urdu Handwritten Text Recognition for Mobile Devices using Intelligent Techniques",2019</li>
+  <li>Mr. M. Shahid Iqbal Malik, "Exploring the Determinants of Web Mining and their Evaluations in Online Reviews",2018</li>
+  <li>Mr. Muhammad Habib, " Restoration of Impulse Noise Corrupted Images using Fuzzy Logic",2018</li>
+  <li>Mr. Masood Tahir, " Intelligent Fault Diagnosis of Rotating Machinery through Vibration Analysis",2018</li>
+  <li>Ms. Sadia Arshid, " Facial Expression Recognition for Multiple Faces in Less-Constraint Environment",2017</li>
+  <li>Ms. Sumaira Farid, " Optimal Feature Selection and Fusion for Content Based Image Retrieval using Computational Intelligence Techniques", 2015</li>
+</ol>
+
+
+            <h2><a name="Professional_Activities"></a>Professional
+              Activities</h2>
+            
+<h3>Invited Research Seminars  <br>
+</h3>
+
+            
+<ul>
+  <li>Image Restoration using Fuzzy Logic, Department of Mechatronics, Gwangju Institute of Science &amp; Technology (GIST), South Korea, March 14, 2013.</li>
+  <li>Role of Soft Computing in Image Processing, Department of Mechatronics, Gwangju Institute of Science &amp; Technology (GIST), South Korea, November 14, 2013.</li>
+  <li>Image Restoration using Soft Computing, Department of Computer Science, Fatima Jinnah Women University, Rawalpindi, Pakistan, May 2, 2014.</li>
+</ul>
+<h3>Administrative Activities</h3>
+
+            <ul>
+              <li>Coordinator Mphil/Ph.D Program, Department of Computer Science,Quaid-i-Azam University Islamabad</li>
+              <li>Member Admission Committee, Department of Computer Science, Quaid-i-Azam University Islamabad</li>
+              <li>Chairman, Department of Computer Science &amp; Software Engineering, International Islamic University Islamabad, Pakistan (September 2017 to January 2020)</li>
+              <li>Head Graduate Research Committee, Department of Computer Science &amp; Software Engineering, International Islamic University Islamabad, Pakistan. (Aug 2010 to December 2011).</li>
+              <li>Head Accreditation Committee, Department of Computer Science &amp; Software Engineering, International Islamic University Islamabad, Pakistan. (2011-2012).</li>
+              <li>Head Admission Committee, Department of Computer Science &amp; Software Engineering, International Islamic University Islamabad, Pakistan. (Fall 2011).</li>
+              <li>Coordinator Professional Development Center (PDC), PMAS-AAUR. (Feb 2010 to Aug 2010).</li>
+              <li>Member Graduate Program Committee, PMAS-AAUR. (Feb 2010 to Aug 2010).</li>
+            </ul>
+            <h3>Journal Reviewer</h3>
+            <ul>
+              <li>Pattern Recognition</li>
+              <li>Knowledge and Information System</li>
+              <li>Multimedia Tools and Applications</li>
+              <li>Digital Signal Processing</li>
+              <li>Signal Processing</li>
+              <li>Computer Programs and Methods in Biomedicine</li>
+            </ul>
+          </div>
+          </section>     
+      </main>
+         
+<footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column useful-links">
+          <h4>Useful links</h4>
+          <div>
+            <a href="http://www.qau.edu.pk/" target="QAU" class="footer-link">QAU</a>
+            <a href="admission.html" class="footer-link">Admissions</a>
+            <a href="contactUs.html" class="footer-link">Contact</a>
+          </div>
+          <address>
+            <strong>Department of Computer Sciences,</strong><br>
+            <strong>Quaid-i-Azam University,</strong><br>
+            Islamabad, 45320, Pakistan<br>
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+  
+        <div class="footer-column">
+          <h4>Our Programs</h4>
+          <ul class="footer-list">
+            <li><a href="Phd.html">PhD (Computer Science)</a></li>
+            <li><a href="ms.html">MS (Information Science &amp; Technology)</a></li>
+            <li><a href="mphil.html">MPhil (Computer Science)</a></li>
+            <li><a href="ms-ds.html">MS (Data Science)</a></li>
+            <li><a href="Bs.html">BS (Computer Science)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div id="foot">
+      <div class="container">
+        <p class="text-center">2025 &copy; Department of Computer Sciences, QAU, Islamabad</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

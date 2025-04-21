@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khalid Saleem</title>
+  <style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9eaeb;
+    padding: 20px;
+    color: rgb(12, 12, 12);
+  }
+  
+  header .logo {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 1.2em;
+  }
+  
+  /* Navbar Styles */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0d1144;
+    padding: 10px;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-left a, .nav-right a {
+    color: rgb(212, 226, 218);
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-left a:hover, .nav-right a:hover {
+    background-color: #290c58;
+  }
+  
+  
+  
+  .page-header {
+    background: linear-gradient(120deg, #5a051f, #6b6757, #0a0552);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page-header h1, .page-header p {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+@media (min-width: 768px) {
+    .projects {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+    
+      .profile-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .profile-header img {
+        width: 200px;
+        border-radius: 8px;
+      }
+      h1, h2, h3 {
+        color: #39085a;
+      }
+      .contact {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .social-icons img {
+        height: 40px;
+        margin-right: 15px;
+      }
+      p, li, .contact {
+        font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333;
+      }
+  /* Footer */
+  footer {
+    background: linear-gradient(120deg, #070555, #6b6757, #58064b);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .footer-column {
+    width: 45%;
+  }
+  
+  .footer-column h4 {
+    margin-top: 0;
+  }
+  
+  .footer-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .footer-list li {
+    margin: 5px 0;
+  }
+  
+  #foot p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .footer-column.useful-links {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000;
+  }
+  
+  .footer-column.useful-links a.footer-link {
+    display: inline-block;
+    background-color: #4d065c;
+    color: white;
+    padding: 6px 12px;
+    margin: 5px 8px 10px 0;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-column.useful-links a.footer-link:hover {
+    background-color: #58073d;
+  }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="container text-center">
+      <h1 class="animate-text">WELCOME TO THE</h1>
+      <h1 class="animate-text">Department of Computer Sciences</h1>
+      <p class="animate-subtext">Quaid-i-Azam University, Islamabad</p>
+    </div>
+  </header>
+
+<div class="navbar-container">
+  <nav class="nav-left">
+    <a href="homepage.html">Home</a>
+    <a href="academics.html">Academics</a>
+    <a href="fundedprojects.html">Funded Projects</a>
+    <a href="research.html">Research</a>
+    <a href="admission.html">Admissions</a>
+    <a href="faculty.html">Faculty</a>
+  </nav>
+
+  <nav class="nav-right">
+    <a href="https://gdsc.community.dev/quaid-i-azam-university/" target="QAU">Google GDSC</a>
+    <a href="http://jobs.qau.edu.pk/" target="QAU">Jobs</a>
+    <a href="http://alumni.cs.qau.edu.pk/" target="QAU">Alumni</a>
+    <a href="http://www.qau.edu.pk/" target="QAU">QAU</a>
+    
+  </nav>
+ 
+</div>
+<main>
+    <div>
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; color: #0d1144;">Onaiza Maqbool</h2>
+<p  style="font-family: 'Playfair Display', serif; font-size: 1.0rem; text-align: center; color: #0d1144;">Department of Computer Sciences</p>
+    </div>
+    <div class="profile-container">
+        <h1>Khalid Saleem</h1>
+        <img src="C:\Users\sky\Desktop\wad lab\assignment no 1\khalid.jpg" alt="Profile Picture" style="float: right; width: 20%; max-width: 200px; margin-left: 1rem;">
+    
+      
+        <p>
+        
+          📧 <a href="mailto:ksaleem @qau.edu.pk">ksaleem@qau.edu.pk</a><br>
+         <p> Associate Professor</p>
+          <p>Post Doctorate (University of Montpellier 2)</p>
+
+           <p>Ph.D. (University of Montpellier 2)</p>
+          <p>DEA - MPhil. (University of Montpellier 2)</p>
+            <p>M.Sc. (Quaid-i-Azam University)</p>
+              ☎ +92-51-9064-2060<br>
+             📯 Dept. of Computer Science,<br><br>
+       
+          <a href="#Research_Publications">Research Publications</a> |
+          <a href="#Projects">Funded Projects</a> |
+          <a href="#PhD_Students">PhD Students</a> |
+          <a href="#MPhil_Theses_Supervised">MPhil/MS Students</a> |
+          <a href="#MSc_Projects_Supervised">BS/MSc Students</a>
+        </p>
+      
+        <h2 id="Research_Interests">Research Interests</h2>
+        <ul>
+         <li><strong>Information Systems</strong> Database Systems, Distributed Database Systems, Data Warehousing, Machine Learning e-Government</li>
+            <li><strong>  Data Analytics </strong>  - Data Mining (Open Data, Big Data and Scientific Data), Data for Development (D4D), Natural Language Processing (URDU)</li>
+            <li><strong> Computing -</strong>   Scientific, Steganography, Cryptography, Mobile, Green></li>
+        </ul>
+        <h2 id="Research_Project">Research Interests</h2>
+        <ul>
+          <li>  Project Title: Optimal Route Planning using Artificial Intelligence for last mile Delivery Services: A case of Intelligent Transport System (ORPAI)</li>
+           <li> PI: Dr. Khalid Saleem</li>
+            <li>Co-PI: Ms. Hina Ali (NUML)</li>
+            <li>Students: 1 MPhil, 2 BS(CS), 1 Software Engineer</li>
+          <li>  Funding Amount: PKR 9.3 Million</li>
+         <li> Funding Agency: National Centre in Big Data and Cloud Computing (NCBC), HEC</li>
+          <li> Duration: 1.5 Years</li>
+           <li> Start Date: January 1, 2021</li>
+           <li> End Date: June 30, 2022</li>
+        </ul>
+      
+        <h2 id="Teaching">Teaching</h2>
+        <ul>
+          <li>PHD
+            <ul>
+               <li><strong> CS-863:</strong> Metadata Model Management</li>
+               <li> <strong> CS-823:</strong>Data Warehousing</li>
+            </ul>
+          </li>
+          <li>MScs / MPhil / MSIST
+            <ul>
+              <li>  CS-772: Data Mining</li>
+               <li> CS-751: Distributed Systems (Database)</li>
+               <li>CS-652: Advance Analysis of Algorithms</li>
+               <li> CS-702: Advance Operating Systems</li>
+              <li>  CS-663: Knowledge Representation and Reasoning</li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+        <li>   BSCS
+            <ul>
+              <li>  CS-225: Database Systems</li>
+               <li> CS-324: Web Application Development</li>
+               <li> CS-424: Mobile Application Development</li>
+            </ul>
+          </li>
+        </ul>
+      
+        <h2 id="Research_Publications">Research Publications</h2>
+        <h3>Current Research/Project Students</h3>
+
+<ul>
+  <li><strong>PhD</strong>
+    <ol>
+      <li><a href="#">Muhammad Fahad Khan</a> : Information Security – Cryptography</li>
+      <li><a href="#">Adeel Ahmed</a> : Recommender System</li>
+      <li><a href="#">Fatima Tuz Zohra</a> : NLP – Free Word Languages</li>
+      <li><a href="#">Hina Ali</a> : Logistics Transportation Information System – Intelligent Decision Support</li>
+    </ol>
+  </li>
+  <li><strong>MPhil/MSIST</strong>
+    <ol>
+      <li><a href="#">Sana Akbar</a> : Smart Agriculture using Machine Learning Techniques</li>
+      <li><a href="#">Atiq Majeed</a> : Multi-Sensor Data Fusion</li>
+      <li><a href="#">Mudassir Hussain</a> : Smart Plants Diseases Identification using Machine Learning Techniques</li>
+      <li><a href="#">Umer Farooq</a> : Analysing effect of recycling on environment</li>
+    </ol>
+  </li>
+</ul>
+<h3>Previous Research Students</h3>
+
+<ul>
+  <li><strong>MPhil/MSIST</strong>
+    <ol>
+      <li>Adeel Ahmed - Mining Haplotypes for Predicting Mutation in Human Gene</li>
+      <li>Latif Talpur - Predicting Pest-Predator Patterns through Classification Techniques</li>
+      <li>Danish Satti - Offline Urdu Nastaliq OCR for Printed Text using Analytical Approach</li>
+      <li>Muzammil Khan - Evaluating Visualization Techniques for Data Mining Results on Mobile Devices</li>
+      <li>Muhammad Usman Shahid - Multi Dimensional Throughput In-Memory Index Structure for Database Applications</li>
+      <li>Irfan Shah - Technique for Online Hotel Recommendation using Collaborative Filtering Approach</li>
+      <li>Kanzul Kiyani - Weather Data Cleansing and Prediction using Data Mining Techniques</li>
+      <li>Junaid Wahid - Incorporating Social Network Data in Environment Index</li>
+      <li>Saba Saleem - Feature Selection for Supervised Learning</li>
+      <li>Muhammad Rehman - GA Based Gait Simulation using Centrality Measures</li>
+      <li>Tayyab Nazir - Weather Data Imputation using Cluster Computing</li>
+      <li>Umer Nasim - Opinion Mining on Transliterated Tweets</li>
+      <li>Shahid Janjua - Flash Flood Disaster Alert System for Early Eocene Cetaceans: Ambulocetidea (Walking Whale)</li>
+      <li>Muhammad Usman - Analysis of co-authorship network</li>
+      <li>Muhammad Islam - Compression Analysis of Digital Data for Cloud based Data Lake Management</li>
+      <li>Qamar Munir - Seasonal Precipitation Forecast Using Data Mining Technique</li>
+      <li>Zarghona Anis - Light Field Compression</li>
+      <li>Shahmir Sajid - Sub-Graph management using Cluster Computing</li>
+      <li>Syed Bilal Shah - Identification of hydropower potentiality on Lai Nullah Basin Using QGIS tool</li>
+      <li>Naveed Tariq - Q Net: Multi-class Object Recognition and Classification of Wild Animals using Deep Convolution Neural Network</li>
+      <li>Ubaidullah - A Cluster Computing Model for Visualizing the Climate Change of Pakistan</li>
+      <li>Shahmir Sajid</li>
+    </ol>
+  </li>
+</ul>
+<h3>Publications</h3>
+
+<ul>
+  <li><strong>Books</strong>
+    <ol>
+      <li><a href="#">[Information Systems]</a> Schema Matching and Integration When schemas are in thousands, Khalid Saleem, ISBN-13: 978-3-8484-3566-1, LAP LAMBERT Academic Publishing, April 2012</li>
+    </ol>
+  </li>
+
+  <li><strong>Journal</strong>
+    <ol>
+      <li><a href="#">[Information Systems]</a> Muhammad Fahad Khan, Khalid Saleem, Mohammed Ali, Alshara, Shariq, Bashir. Multilevel Information Fusion for Cryptographic Substitution Box Construction based on Inevitable Random Noise in Medical Imaging. <i>Nature Scientific Reports, Springer 2021.</i> (accepted) (w Category)</li>
+      
+      <li><a href="#">[Information Systems]</a> Ahmed, Adeel; Saleem, Khalid; Khalid, Osman; Rashid, Umer; Baz, Abdullah. On Deep Neural Network for Trust Aware Cross Domain Recommendations in E-commerce. <i>Expert Systems with Applications, Elsevier 2021.</i> (accepted) (w Category)</li>
+      
+      <li><a href="#">[Information Systems]</a> Umer, Rashid; Khalid, Saleem; Ahmed, Adeel. MIRRE approach: nonlinear and multimodal exploration of MIR aggregated search results. <i>Multimedia Tools and Applications, Springer 2021.</i> (accepted) (w Category)</li>
+      
+      <li><a href="#">[Information Systems]</a> Ghazanfar, Siddiqui; Muhammad Zafar; Khalid, Saleem; Zafar, Saeed; Ibrahim A., Hameed; Adeel, Ahmed; M. Fahad, Khan. A Dynamic Three-Bit Image Steganography Algorithm for Medical and e-Healthcare Systems. <i>IEEE ACCESS, 2020.</i> (w Category)</li>
+      
+      <li><a href="#">[Information Systems]</a> Ahmed, Adeel; Saleem, Khalid; Rashid, Umer; Baz, Abdullah. Modeling Trust Aware Recommendations with Temporal Dynamics in Social Networks. <i>IEEE ACCESS, 2020.</i> (w Category)</li>
+      
+      <li><a href="#">[Information Systems]</a> Malik, Maryam Imtiaz; Sindhu, Mudassar Azam; Khattak, Akmal Saeed; Abbasi, Rabeeh Ayaz; Saleem, Khalid. Automating test oracles from restricted natural language agile requirements. <i>Expert Systems (Wiley), 2020.</i> <a href="https://doi.org/10.1111/exsy.12608">https://doi.org/10.1111/exsy.12608</a> (w Category)</li>
+      
+      <li><a href="#">[Computing]</a> Ahmed, Adeel; Khan, Muhammad Fahad; Saleem, Khalid; Shah, Tariq. A Novel Design of Cryptographic SP-Network Based on Gold Sequences and Chaotic Logistic Tent System. <i>IEEE ACCESS, 2019.</i> (w Category)</li>
+      
+      <li><a href="#">[Computing]</a> Khan, Muhammad Fahad; Ahmed, Adeel; Saleem, Khalid. A Novel Cryptographic Substitution Box Design Using Gaussian. <i>IEEE ACCESS Vol. 7, Jan 2019.</i> (w Category)</li>
+      
+      <li><a href="#">[Computing]</a> Qasim, Tehreem; Zia, Muhammad; Minhas, Qurratulain; Bhatti, Naeem; Saleem, Khalid; Qasim, Tooba; Mahmood, Anas. An Ant Colony Optimization Cost Coverage on 3-D Grid in Wireless Sensor Networks. <i>IEEE COMMUNICATIONS LETTERS, 6/22.</i> (2022 w Category)</li>
+      
+      <li><a href="#">[Data Analytics]</a> Ahmed, Adeel; Khan, Muhammad Fahad; Saleem, Khalid. Analysis of Coauthorship Network in Political Science using Centrality Measures. <i>INTERNATIONAL JOURNAL OF ADVANCED COMPUTER SCIENCE AND APPLICATIONS, 10/9.</i> (Oct 2019, w Category)</li>
+      
+      <li><a href="#">[Data Analytics]</a> Batool, Zahra; Usman, Muhammad; Saleem, Khalid; Abdullah-Al-Wadud, M.; Fazal-e-Amin; Al-Eiwi, Abdulhameed. Disease-Disease Association Using Network Modeling: Challenges and Opportunities. <i>JOURNAL OF MEDICAL IMAGING AND HEALTH INFORMATICS, 4/8, May 2018</i> (w Category)</li>
+    </ol>
+  </li>
+</ul>
+<h2>Book Chapters / Conference / Workshop Proceedings</h2>
+<ol>
+  <li><strong>[Information Systems]</strong> Wahid, Junaid Abdul; Shi, Lei; Tao, Yongcai; Lin, Wei; Saleem, Khalid. Incorporation of social media indicator in e-Government index. <em>ICCIP '19: Proceedings of the 5th International Conference on Communication and Information Processing</em>, November 2019, Pages 201–209. October 15–17, 2019, Chongqing, China.</li>
+  
+  <li><strong>[Information Systems]</strong> Zafar Iqbal, Saqib Iqbal, Mubashar Mushtaq, Ghazanfar Farooq, Khalid Saleem. GLCM based Skin Diseases Classification using Texture Features. <em>CAINE 2018</em>, October 8–10, 2018, New Orleans, LA, USA.</li>
+
+  <li><strong>[Information Systems]</strong> Naveed Tariq, Khalid Saleem, Mubashar Mushtaq, Muhammad Ali Nawaz. Snow Leopard Recognition Using Deep Convolution Neural Network. <em>ICISDM '18</em>, April 9–11, 2018, Lakeland, FL, USA.</li>
+
+  <li><strong>[Information Systems]</strong> Kanwal Kiani, Khalid Saleem. K-Nearest Temperature Trends: A Method for Weather Temperature Data Imputation. <em>ICISDM 2017</em>, April 01–03, 2017, Charleston, South Carolina, USA.</li>
+
+  <li><strong>[Data Analysis]</strong> Muhammad Fahad Khan, Khalid Saleem, Mubashar Mushtaq. Optimally Compressed Digital Content Delivery Using Short Message Service. <em>ITNG-2017</em>, April 10–12, 2017, Las Vegas, Nevada.</li>
+
+  <li><strong>[Data Analysis]</strong> Tehreem Qasim et al. ACO-Discreet: An efficient node deployment approach in wireless sensor networks. <em>ITNG-2017</em>, April 10–12, 2017, Las Vegas, Nevada, USA.</li>
+
+  <li><strong>[Information Systems]</strong> Adeel Ahmed, Khalid Saleem, Mubashar Mushtaq. Pakistan Genetic Disease Database. <em>SEDE-2016</em>, September 26–28, 2016, Denver, Colorado, USA.</li>
+
+  <li><strong>[Data Analysis]</strong> Adeel Ahmed, Khalid Saleem, Mubashar Mushtaq. Analyzing Patterns of Scientific Collaboration using Centrality Measures and Modularity. <em>SEDE-2016</em>, September 26–28, 2016, Denver, Colorado, USA.</li>
+
+  <li><strong>[Computing]</strong> Muhammad Fahad Khan, Mubashar Mushtaq, Khalid Saleem, Saira Beg. Audio2SMS+: Enhancing Audio Compression for Communication Systems in Low Signal Strength Areas. <em>CATA-2016</em>, April 4–6, 2016, Las Vegas, Nevada, USA. (Accepted)</li>
+
+  <li><strong>[Computing]</strong> Muhammad Fahad Khan, Mubashar Mushtaq, Khalid Saleem. Lossless Compression based Digital Content Delivery over Satellite Communication in Low Signal Strength Areas. <em>IEEE ICCSI</em>, May 3–5, 2016, Taif, Saudi Arabia. (Accepted)</li>
+
+  <li><strong>[Information Systems]</strong> Khalid Saleem. m-Government: Anywhere Anytime Government Services. Keynote, <em>1st International Conference on Information and Communication Technology Trends</em>, Pages 170–173, September 2013, Karachi, Pakistan.</li>
+
+  <li><strong>[Data Analytics]</strong> Adeel Ahmed, Khalid Saleem. Haplotype Segment Algorithm for Predicting Disease Gene Locus. <em>Springer CCIS Series</em>, Vol 281, 2012, pp. 31–42. DOI: 10.1007/978-3-642-28962-0_4.</li>
+
+  <li><strong>[Data Analytics]</strong> Danish Altaf Satti, Khalid Saleem. Complexities and Implementation Challenges in Offline Urdu Nastaliq OCR. <em>Conference on Language & Technology</em>, October 2012, Lahore.</li>
+
+  <li><strong>[Data Analytics]</strong> Adeel Ahmed. A Heuristic Approach to the Identification of Disease Gene Region using Haplotype Analysis. <em>Human Genome Meeting</em>, March 14–17, 2011, Dubai, UAE.</li>
+
+  <li><strong>[Information Systems]</strong> Khalid Saleem, Zohra Bellahsene. Complex Schema Match Discovery and Validation through Collaboration. <em>Springer LNCS 5870</em>, On the Move to Meaningful Internet Systems, Pages 406–413, November 2009, Vilamoura, Portugal. DOI: 10.1007/978-3-642-05148-7_30.</li>
+
+  <li><strong>[Information Systems]</strong> Khalid Saleem, Zohra Bellahsene. Automatic Extraction of Structurally Coherent Mini-Taxonomies. <em>Springer LNCS 5231</em>, Conceptual Modeling, Pages 341–354, October 2008, Barcelona, Spain. DOI: 10.1007/978-3-540-87877-3_25.</li>
+
+  <li><strong>[Information Systems]</strong> Khalid Saleem, Zohra Bellahsene, Ella Hunt. Performance Oriented Schema Matching. <em>Springer LNCS 4653</em>, Database and Expert Systems Applications, Pages 844–853, August 2007, Regensburg, Germany. DOI: 10.1007/978-3-540-74469-6_82.</li>
+
+  <li><strong>[Information Systems]</strong> Khalid Saleem, Zohra Bellahsene. A scalable approach for large scale schema matching. <em>DÉCOR Workshop @ EGC</em>, 2007, Namur, Belgium.</li>
+</ol>
+
+<h2>Technical Reports</h2>
+<ol>
+  <li><strong>[Information Systems]</strong> Khalid Saleem, Zohra Bellahsene. Open Data Analytics - Research Perspectives. Post-Doctorate Report, Submitted to HEC, October 2012.</li>
+
+  <li><strong>[Information Systems]</strong> Khalid Saleem, Zohra Bellahsene. New Challenges in Data Integration: Large Scale Automatic Schema Matching. <a href="http://hal-lirmm.ccsd.cnrs.fr/docs/00/27/36/99/PDF/SchemaMatchingSurvey.pdf" target="_blank">HAL: lirmm-00170765, version 2</a>, 2008.</li>
+</ol>
+
+            
+      </main>
+         
+<footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column useful-links">
+          <h4>Useful links</h4>
+          <div>
+            <a href="http://www.qau.edu.pk/" target="QAU" class="footer-link">QAU</a>
+            <a href="admission.html" class="footer-link">Admissions</a>
+            <a href="contactUs.html" class="footer-link">Contact</a>
+          </div>
+          <address>
+            <strong>Department of Computer Sciences,</strong><br>
+            <strong>Quaid-i-Azam University,</strong><br>
+            Islamabad, 45320, Pakistan<br>
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+  
+        <div class="footer-column">
+          <h4>Our Programs</h4>
+          <ul class="footer-list">
+            <li><a href="Phd.html">PhD (Computer Science)</a></li>
+            <li><a href="ms.html">MS (Information Science &amp; Technology)</a></li>
+            <li><a href="mphil.html">MPhil (Computer Science)</a></li>
+            <li><a href="ms-ds.html">MS (Data Science)</a></li>
+            <li><a href="Bs.html">BS (Computer Science)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div id="foot">
+      <div class="container">
+        <p class="text-center">2025 &copy; Department of Computer Sciences, QAU, Islamabad</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

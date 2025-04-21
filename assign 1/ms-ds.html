@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QAU Computer Science Department</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9eaeb;
+    padding: 20px;
+    color: rgb(12, 12, 12);
+  }
+  
+  header .logo {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 1.2em;
+  }
+  
+  /* Navbar Styles */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0d1144;
+    padding: 10px;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-left a, .nav-right a {
+    color: rgb(212, 226, 218);
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-left a:hover, .nav-right a:hover {
+    background-color: #290c58;
+  }
+  /* Main Content */
+  .container {
+    padding: 20px;
+  }
+  
+  .page-header {
+    background: linear-gradient(120deg, #5a051f, #6b6757, #0a0552);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page-header h1, .page-header p {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+@media (min-width: 768px) {
+    .projects {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  /* Main Content Layout */
+main {
+    padding: 30px 20px;
+    background-color: #fff;
+    line-height: 1.7;
+    color: #222;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* Content Section */
+  .content-section {
+    margin-bottom: 40px;
+  }
+  
+  .content-section h2 {
+    color: #0d1144;
+    font-size: 28px;
+    margin-bottom: 10px;
+    border-left: 5px solid #5a051f;
+    padding-left: 15px;
+  }
+  
+  .content-section p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Info Cards */
+  .info-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid #6b6757;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .info-card h3 {
+    margin-top: 0;
+    color: #39085a;
+  }
+  
+  /* Contact Box */
+  .contact-box {
+    margin-top: 20px;
+    background-color: #f1f1f8;
+    padding: 15px 20px;
+    border-left: 4px solid #5e0c6b;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      padding: 20px 15px;
+    }
+  
+    .content-section h2 {
+      font-size: 24px;
+    }
+  
+    .info-card {
+      padding: 15px;
+    }
+  
+    .contact-box {
+      font-size: 14px;
+      padding: 12px 15px;
+    }
+  }
+  
+  @media (max-width: 480px)
+   { .content-section h2 
+    font-size: 20px;
+  }
+    main.page-content {
+        max-width: 1100px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      
+      .program-box {
+        background-color: #fff;
+        border-left: 5px solid #004466;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 1.5rem 2rem;
+        margin-bottom: 2rem;
+        transition: transform 0.2s ease;
+      }
+      
+      .program-box:hover {
+        transform: scale(1.01);
+      }
+      
+      .program-box h2 {
+        margin-top: 0;
+        color: #004466;
+      }
+      
+      .program-box h3 {
+        margin-top: 1.5rem;
+        color: #005577;
+      }
+      
+      .program-box ul {
+        padding-left: 1.5rem;
+      }
+      
+      .program-box li {
+        margin-bottom: 0.5rem;
+      }
+      
+  
+  /* Footer */
+  footer {
+    background: linear-gradient(120deg, #070555, #6b6757, #58064b);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .footer-column {
+    width: 45%;
+  }
+  
+  .footer-column h4 {
+    margin-top: 0;
+  }
+  
+  .footer-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .footer-list li {
+    margin: 5px 0;
+  }
+  
+  #foot p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .footer-column.useful-links {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000;
+  }
+  
+  .footer-column.useful-links a.footer-link {
+    display: inline-block;
+    background-color: #4d065c;
+    color: white;
+    padding: 6px 12px;
+    margin: 5px 8px 10px 0;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-column.useful-links a.footer-link:hover {
+    background-color: #58073d;
+  }
+</style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="container text-center">
+      <h1 class="animate-text">WELCOME TO THE</h1>
+      <h1 class="animate-text">Department of Computer Sciences</h1>
+      <p class="animate-subtext">Quaid-i-Azam University, Islamabad</p>
+    </div>
+  </header>
+
+<div class="navbar-container">
+  <nav class="nav-left">
+    <a href="homepage.html">Home</a>
+    <a href="academics.html">Academics</a>
+    <a href="fundedprojects.html">Funded Projects</a>
+    <a href="research.html">Research</a>
+    <a href="admission.html">Admissions</a>
+    <a href="faculty.html">Faculty</a>
+  </nav>
+
+  <nav class="nav-right">
+    <a href="https://gdsc.community.dev/quaid-i-azam-university/" target="QAU">Google GDSC</a>
+    <a href="http://jobs.qau.edu.pk/" target="QAU">Jobs</a>
+    <a href="http://alumni.cs.qau.edu.pk/" target="QAU">Alumni</a>
+    <a href="http://www.qau.edu.pk/" target="QAU">QAU</a>
+    
+  </nav>
+</div>
+
+<div>
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; color: #0d1144;"> MS DATA SCIENCE</h2>
+<p  style="font-family: 'Playfair Display', serif; font-size: 1.0rem; text-align: center; color: #0d1144;">Our faculty members challenge their students,
+    share insights gained through professional experience and communicate
+    the knowledge they've spent a lifetime acquiring.</p>
+    </div>
+    <section class="program-box">
+        <h2>MS (Data Science)</h2>
+      
+        <h3>Objectives</h3>
+        <p>
+          Data Science has become increasingly important due to the need for analyzing and understanding the ever-increasing data generated by various sources. 
+          By getting admission in the MS programme, applicants will not only improve their qualifications but also be equipped with the latest knowledge in the field. 
+          Students will be exposed to different aspects of data science including programming, data structures, algorithms for data science, data analysis and visualization, and big data analytics. 
+          These aspects will provide students with opportunities to effectively work in local and international markets as well as to pursue a PhD in data science.
+        </p>
+      
+        <h3>MS (Data Science) Part Time</h3>
+        <p>
+          Quaid-i-Azam University is keen to serve the community by offering an opportunity for individuals working in related fields who may not be able to attend a full-time post-graduate programme. 
+          Classes will be held in the evening after 5pm. By getting admission in the programme, applicants will not only improve their qualifications but will also be equipped with the latest knowledge and techniques in the field of information studies.
+        </p>
+      
+        <h3>Programme Objectives</h3>
+        <p>The main objectives of the programme are to enable students to:</p>
+        <ul>
+          <li>Analyze and solve problems related to data for local and international markets.</li>
+          <li>Effectively use appropriate techniques and tools used in data science.</li>
+          <li>Learn state-of-the-art technologies associated with data science.</li>
+          <li>Pursue a PhD degree in data science or associated disciplines.</li>
+        </ul>
+      
+        <h3>Eligibility</h3>
+        <p>
+          Students must have completed 16 years of education, either a BS (4 years) or MSc in computing-related disciplines.
+        </p>
+      
+        <h3>Programme Structure</h3>
+        <p>
+          The MS programme consists of 30 credit hours. Each course is of 3 credit hours, and there are 2 compulsory courses along with a number of optional courses.
+        </p>
+      
+        <h4>MS (Data Science) Programme Options</h4>
+        <ul>
+          <li>24 credit hours for the course work and 6 credit hours for project/thesis.</li>
+          <li>30 credit hours for the course work.</li>
+        </ul>
+      </section>
+      <h2>Compulsory Courses</h2>
+<section class="courses">
+  
+  <div class="info-card">
+    <h3>DSC-605: Programming for Data Science</h3>
+    <p>Problem solving for data science, programming constructs, data structures (lists, sets, tuples, dictionaries), working with different types of data (tabular, semi-structured, unstructured), data wrangling (understanding data, transforming and structuring data, data cleaning, data enrichment, data validation), introduction to data analytics, data visualization basics.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-606: Probability and Statistics for Data Science</h3>
+    <p>Probability spaces, random variables, multivariate random variables, expectation, convergence, statistical models, estimation, hypothesis testing, Bayesian methods, linear regression, logistic regression, applications of probability and statistics in data science, applied data science case-studies.</p>
+  </div>
+
+</section>
+
+<h2>Elective Courses</h2>
+<section class="courses">
+  
+  <div class="info-card">
+    <h3>DSC-632: Advanced Web Development</h3>
+    <p>Essentials of web development; JavaScript: basic concepts, synchronous and asynchronous programming, event loop, callback hells and promises; Server Side Scripting: Introduction, Backend architecture, REPL (Read-Eval-Print-Loop), server-side modules, synchronous and asynchronous CRUD (Create, Read, Update, Delete) operations; Data Handling; API Development: RESTful APIs, GraphQL, API testing; Middleware; Template engines; Databases: connecting backend with databases; Front-end Frameworks; Styling in frontend frameworks; State management; Frontend API access; Frontend state management.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-653: Natural Language Processing</h3>
+    <p>Introduction to natural language processing, applications of NLP, regular expressions, regular expressions in NLP, text normalization, language modeling with n-grams, Naïve bayes classification and sentiment, POS tagging and HMM, Viterbi algorithm, CFGs and PCFGs, semantic analysis, text classification and evaluation, topic modeling, opinion mining, information extraction, named entity recognition, information retrieval, word sense disambiguation, question answering, dialog systems, Coreference resolution, text summarization, text alignment, language translation, latent semantic indexing, dimensionality reduction.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-660: Research Methods</h3>
+    <p>Overview of computer science sub-areas, Introduction to research methods. The objectives and dimensions of research. Tools of research. Key research areas of interest. The research problems: Finding a problem, stating the problem, identifying sub-problems. Review of related literature: Survey paper presentation. Planning the research project. The scientific method, Research planning, Data analysis and Statistical Methods. Conducting research in computer science. Proposal presentation. Research methodology: Quantitative and qualitative approach.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-665: Cloud Computing</h3>
+    <p>Introduction to Cloud Computing; Virtualization; Cloud Stack; Infrastructure as a Service (IaaS); Platform as a Service (PaaS); Software as a Service (SaaS); Cloud Computing Platforms; Distributed Storage Systems; Parallel Programming in the Cloud; Mobile Cloud Computing; Cloudlets; Commercial Cloud Computing Platforms.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-672: e-Government</h3>
+    <p>Introduction to the Course; Overview of trends driving the development of Government/Non-Profit web Site and Analysis; Citizen Centric Web Design; Overview of Key of e-government Practices and applications: Citizen to Government, Business to Government, Government to Government; Policy Issues in e-government: Public Access & Government Transparency, Privacy and Security Issues; IT Management for Governments and Non-profits.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-673: Multimedia Technology</h3>
+    <p>Multimedia: Image acquisition and manipulation; Still Imaging; 3D & Animation: Moving image creation and manipulation; Video: acquisition and manipulation; Audio: acquisition and manipulation; Multimedia Platforms: Unix/SG, PC, Mac, Linux; Convergence, Internet & Interactive Media; Technical Issues and future trends.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-675: Information Retrieval Systems</h3>
+    <p>Structure of IR Systems; Vector Space Models; Language Models; Evidence from Behavior; Evidence from Metadata; User Interaction; Indexing; Cross-Language Retrieval; Document Image Retrieval; Speech and Music retrieval; Photograph and Video Retrieval.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-731: Optimization Methods for Data Science</h3>
+    <p>Linear optimization; unconstrained nonlinear optimization; nonlinear optimization algorithms; linear regression; nonlinear regression; logistic regression; numerical solution for linear systems; stochastic gradient descent; constrained nonlinear optimization; quadratic programs; application of optimization methods in data science.</p>
+  </div>
+  <div class="info-card">
+    <h3>DSC-741: Computer Vision</h3>
+    <p>Computer vision, geometric primitives and 2D transformations, image processing and filtering, Camera model, Convolution, feature detection, matching, model fitting, object recognition, supervised learning, linear classifiers, neural networks and convolution neural network, their applications in objection detection and localization, stereo, optical flow and tracking.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-742: Internet of Things</h3>
+    <p>Introduction to the Internet of Things; IoT and its importance; Elements of an IoT ecosystem; Technology and business driver; IoT applications, trends and implications; Basics of Networking; Understanding the abstraction of layers; TCP/IP protocols stack; SDN Architecture; Control and Management plane improvements with SDN; Network Automation and Virtualization; Arduino and Raspberry Pi; Sensors and sensor nodes; Sensing components and devices; Sensor modules, nodes, motes and systems; Connectivity and networks; Wireless technologies for the IoT; Edge connectivity and protocols; IoT exercises; Local processing on the sensor nodes; Connecting devices at the edge and to the cloud; Processing data offline and in the cloud.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-772: Data Mining</h3>
+    <p>The data mining process, Data preprocessing: Cleaning, Transformation, Reduction. Data warehousing: Multidimensional data modeling, OLAP. Classification: Bayesian, Decision tree. Prediction, Mining association rules: Association rules and types, Interestingness measures, multidimensional rules, Apriori algorithm. Cluster analysis: Partitional, Hierarchical, Density based. Mining complex data.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-775: Digital Libraries</h3>
+    <p>Introduction to digital libraries; A brief history of Digital Library development.; Planning a Digital Library; Presenting documents; Digital Document Formats: Markup and Metadata; Metadata standards; Interoperability; Digital Preservation, new media; Case Studies of Digital Libraries; Research Issues in Digital Libraries.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-781: Content based Information Retrieval</h3>
+    <p>Introduction to multimedia content (i.e., text, audio, image, and video objects); multiple modalities of information (i.e., textual, acoustic, and visual); web and multimedia contents; indexing and retrieval of various types of multimedia-based content; multimedia content descriptors and feature sets; multimedia content modeling; structured and semi-structured data models; Content based indexing and retrieval models; CBIR architectures; multimedia information retrieval and ranking; content-based web search; CBIR evaluation; emerging trend in CBIR.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-787: Special Topics in Data Science</h3>
+    <p>Latest trends in data science; state of the art research in data science; data science case-studies; Topics which are not covered in other courses.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-815: Neural Information Retrieval</h3>
+    <p>Information retrieval fundamentals, information retrieval evaluation, word representational learning, word embeddings, language modeling, Word2Vec, FastText, word embeddings in information retrieval, query expansion with word embeddings, application to patent retrieval, neural networks, neural network methods in NLP, Sequence Modeling with CNNs (Convolutional Neural Networks) and RNNs (Recurrent Neural Networks): modeling word n-grams with CNN, hierarchical CNNs, recurrent neural networks, simple RNN, RNN as Encoder, LSTM, LSTM gating mechanism, encoder-decoder architecture, attention mechanism, encoder-decoder, and attention, Transformer and BERT: transformer architecture, contextualization via self-attention, transformer – positional encoding, masked language modeling, BERT, and extractive question answering, Neural Re-ranking: text-based neural models, properties of neural IR models, neural re-ranking models, re-ranking evaluation, KNRM (Kernel based Neural Ranking Model), and convolutional KNRM, Transformer Contextualized Re-ranking: web search with BERT, Re-ranking with BERT, splitting BERT - PreTTR and ColBERT, transformer-kernel ranking, TK (Transformer-Kernel) ranking, TKL (Transformer-Kernel for Long documents)and a hybrid approach IDCM (Intra-Document Cascade Model), domain specific information retrieval applications, Dense Retrieval Models – Knowledge Distillation: neural methods for IR beyond re-ranking, dense retrieval, dense retrieval and re-ranking, dense retrieval lifecycle, BERTDOT model, nearest neighbour search, nearest neighbour search – GPU brute-force, approximation of nearest neighbour search, knowledge distillation, DistilBERT, distillation in IR, deep learning based recommender systems.</p>
+  </div>
+  <div class="info-card">
+    <h3>DSC-816: Medical Image Analysis</h3>
+    <p>Introduction to medical image analysis, medical imaging modalities, image acquisition techniques: MRI, CT, ultrasound, X-ray, challenges and characteristics of medical image data, role of medical image analysis in healthcare and medical research, medical image preprocessing, image denoising and artifact correction techniques, image enhancement methods, image segmentation in medical images, feature extraction and representation, image registration and fusion, classification and diagnosis, machine learning and deep learning approaches for medical image classification and diagnosis, computer-aided diagnosis (CAD) systems in medical imaging and performance measures.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-817: Transfer Learning and Applications</h3>
+    <p>Overview of machine learning and deep learning, neural networks and optimization algorithms, Introduction to Transfer Learning and pretrained models, evaluation and model selection, Feature extraction using pretrained models, Techniques for fine-tuning pretrained models, Unsupervised domain adaptation and self-supervised learning, multi-task learning and applications, Big Transforms, Vision Transforms, Transfer learning in computer vision, Challenges and considerations in transfer learning for computer vision tasks, Transfer Learning in Natural Language Processing (NLP), Fine-tuning pretrained language models for various NLP tasks, Applications of transfer learning in sentiment analysis, text generation, and question answering, Meta-learning and few-shot learning, Lifelong learning.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-818: Advanced Computer Vision</h3>
+    <p>Advanced Image Processing Techniques, Image enhancement: multi-scale processing, contrast enhancement, Edge detection, Image restoration, Feature Extraction and Description, Matching and alignment of image features, Image Segmentation, Semantic Segmentation, Object detection with CNNs, Transfer learning and fine-tuning pre-trained models, 3D object recognition and pose estimation, Video Analysis and Tracking, Generative Adversarial Networks (GANs) for image generation and style transfer, Attention mechanisms in computer vision, Visual understanding in specific domains: robotics, medical imaging, autonomous vehicles.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-819: Machine Learning for Software Engineering</h3>
+    <p>Representation of problem and ML/DL models for Software Engineering tasks related to the following: Requirements Engineering (e.g. requirement tracing, requirement prioritization, requirement assessment), Design and Modeling (e.g. design pattern detection, software modeling, architecture evaluation), Implementation (e.g. code smell detection, code summarization, code comment management), Defect Analysis (e.g defect localization, defect categorization, defect cause analysis), Project management (e.g. software effort estimation, software crowdsourcing recommendations), evaluation approaches and measures, embedding techniques and pre-trained models for software, factors in selection of ML/DL, challenges in application of ML for SE, future research directions.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-823: Data Warehousing</h3>
+    <p>Overview of the course and a brief history; Data Warehouse Architecture; Extract Transform Load; Data Cleansing Algorithms; Hot and Cold Data; Data Warehouse support for OLAP and Data Mining; Active Data warehousing; Semantic Data warehousing; Oracle solution, TeraData solution; Case Studies.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-825: Machine Learning</h3>
+    <p>Introduction: Overview of machine learning, Machine learning applications and examples, inductive learning, inductive bias; Decision tree learning: Representation, algorithm, hypothesis space, rule extraction, pruning; Neural networks: Representation, perceptrons, multilayer networks, backpropagation algorithm, Training procedures; Bayesian learning: Bayes theorem, maximum likelihood hypothesis, Bayes classifiers, Baysian belief networks; Instance-based learning: K-nearest neighbours, lazy and eager learning; Evaluating Hypothesis: Hypothesis accuracy, sampling theory, hypothesis testing; Computational learning theory: Probably learning an approximately correct hypothesis, sample complexity for finite and infinite hypothesis, VC dimension; Unsupervised learning: Clustering, types, steps.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-826: Pattern Recognition</h3>
+    <p>Introduction: Overview of pattern recognition, review of matrix algebra, probability distributions and probability; Bayesian Decision Theory: Classifiers, discriminant functions and decision surfaces, normal density and discriminant functions for normal density, error bounds for normal densities; Bayesian Parameter Estimation: Univariate and Multivariate cases for the Gaussian distribution, bias, class-conditional densities; Maximum Likelihood Estimation: The general principle, Unknown parameter cases for Gaussian distribution; Problems of dimensionality: Accuracy and training sample size, computational complexity, overfitting; Component Analysis: Principle Component Analysis, Fisher Linear discriminant; Non-Parametric Techniques: Parzen windows, K-Nearest neighbour rule and estimation.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-827: Social Network Analysis</h3>
+    <p>Introduction to social networks, random network models, identifying connected components, giant component, average shortest path, diameter, preferential attachment, network centrality, betweenness, closeness, clustering, community structure, modularity, overlapping communities, small world network models, contagion, opinion formation, applications of social network analysis, social media networks.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-829: Social Media Mining</h3>
+    <p>Social media platforms; data retrieval from social media platforms; analyzing social media data; applications of social media mining: trend detection, fake posts and profiles detection, fraud detection, discussions analysis (like governance, businesses, politics); privacy for social media mining; social issues in social media mining;</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-8XX: Advanced Social Network Analysis</h3>
+    <p>Overview of social network analysis; dynamic networks – representation, measures, centrality, connectedness, growth, applications of dynamic networks; multiplex networks – formulation of multiplex networks, weighted multiplex networks, unweighted multiplex networks, neighbors, paths, layers, centrality measures in multiplex networks, communities in multiplex networks; network resilience – measuring resilience, failure in networks, targeted attacks in networks; information diffusion – modeling information diffusion, epidemic models, influence models, explanatory models; recent trends in social network analysis.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-838: Recommender Systems</h3>
+    <p>Introduction to recommender systems; Collaborative recommendation; Content-based recommendation; Knowledge-based recommendation; Hybrid recommendation approaches; Evaluating recommender systems; Recommender systems and the next-generation web; Group Recommender Systems; Trust-Aware Recommender Systems; Social Recommender Systems; Time and Location Sensitive Recommender Systems, Cross-Domain Recommender Systems, Multi-Criteria Recommender Systems; Advanced topics in recommender systems.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-839: Information Cryptography</h3>
+    <p>Introduction to Nondeterministic and deterministic cryptography, Computationally secure encryption, Asymptotic ciphers, Computational Indistinguishability, Symmetric multi-party computation, Searchable encryption, Secure multiparty computation, Oblivious data transfer, Shannon perfect security, Linear and Nonlinear feedback shift registers, Block ciphers structures, Design and analysis of block ciphers primitives, Design and analysis of stream cipher primitives, Design and analysis of collision resistant hashing algorithms, Differential and Linear Cryptanalysis, Attacks on block ciphers, Attacks on stream ciphers, Partitioning cryptanalysis, Brute-force attacks, Plaintext attacks, Man in middle attack, Chosen plaintext attack, Known key attack, Ciphertext-only attack, Non-deterministic and deterministic random bit generator, Statistical randomness evaluation, Key generation, Key distribution centre, Factorization of polynomials, Gröbner basis algorithms, Shor's basis algorithm, Digital signature standard, Merkle–Hellman knapsack cryptosystem, Public key exchange, Zero-Knowledge Cave, Certification authorities.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-841: Metadata for Information Resources</h3>
+    <p>Overview of the course and Metadata; History of schemes and metadata communities; Functions and Types of metadata; Metadata Structure and Characteristics: Semantics, syntax, and structure; Metadata creation process models; Interoperability; Metadata Integration and Architecture: Warwick Framework; Resource Description Framework; Open Archives Initiative; Encoding Standards (Markup Languages): Introduction and history of markup; Metadata use of markup languages; Document Type Definitions (DTD); Structural metadata Data Control Standards: Resource Identifiers; Data Registries; Controlled vocabularies; Name authority control (ISAAR and FRANAR); A-Core; Encoded Archival Description (EAD), Text Encoding Initiative (TEI); Metadata Evaluation: User needs; Quality control issues; Evaluation methods; Educational Metadata: Instructional Management Systems (IMS); Learning Object Metadata (LOM); Gateway to Educational Materials (GEM); Government Information Locator Service (GILS); Visual Resources Metadata: Categories for the Description of Works of Art (CDWA); Visual Resources Association (VRA) Core; Computer Interchange of Museum Information (CIMI).</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-845: Deep Learning</h3>
+    <p>Review of Neural Networks, activation functions & back-propagation; multilayer neural nets, deep networks, learning algorithms, Convolutional Neural Networks: History, Convolution, Pooling, CNNs for classification, CNN Architectures; Sequence Modeling: Recurrent and Recursive Nets: Long-Short Term Memory models and variants, Language modeling and image captioning, Unsupervised learning: Restricted Boltzmann Machines and Auto-encoders; Case Studies.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-846: Probabilistic Graphical Models</h3>
+    <p>Probabilistic Graphical Models; Bayesian Networks; Directed Graphical Models; Undirected Graphical Models; Factor Graphs; Local Probabilistic Models; Probabilistic Inference; Exact Inference; Approximate Inference; Maximum Likelihood and Structural Learning; Learning Temporal Models; Introduction to Causality.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-84X: Advance Natural Language Processing</h3>
+    <p>Description not provided yet.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-847: High Performance Computing</h3>
+    <p>Introduction to High performance Computing (HPC); Parallel platforms; Interconnection Networks; Parallel programming patterns; Multiprocessor architectures; Cache coherence in symmetric multiprocessors; OpenMP; Parallel programming with MPI; Parallel algorithms.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-848: Big Data Analytics</h3>
+    <p>Big Data Platforms; Big Data Storage, Tools, Algorithms, and Platforms (NoSQL, MapReduce, Hadoop, Apache Spark); Advanced Hashing Techniques; Bloom Filters; Real-Time Stream Analysis (algorithms, sampling, approximate statistics); Linked Big Data Analysis (Ontologies, SPARQL, Linked Open Data); Visualization Tools and Libraries (Tableau, D3.js); Graph Databases (Neo4J).</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-849: Data Governance</h3>
+    <p>Data governance strategies; data governance processes; data governance tools; cloud-based data governance; data life-cyle; data quality; data protection; governing streaming data; data privacy; data security; data monitoring.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-861: Information Visualization and Presentation</h3>
+    <p>Overview of the course and Information Visualization; Types of Graphs and Visualizations Data Types and Graph Types; Design Choices in Building Basic Graphs; Multidimensional Graphing; Graphing and Basic Statistics; Perceptual Properties; How to Critique Visual Designs Interactive Visualization; Multidimensional Interactive Visualization; Animation; Visualization Networks; Visualization for Search Interfaces and related Fields; Visualization for Text Analysis; 3D in Visualization; Research trends in Information Visualization.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-871: Digital Preservation</h3>
+    <p>Introduction to Digital Preservation. Digital objects, and their preservation; Key issues such as obsolescence of storage media, software and data formats, hardware, and Digital Curation in Digital Libraries; their solution; Benefits of digital preservation such as Legal, Accountability & protection from litigation, Protecting the long term view, Protecting investment, Reuse; Reference Models for digital preservations; Role of Metadata and Registries; Preservation Methods, approaches, and their evaluation; Selection and appraisal methodologies; Digital Curation in Digital Libraries; Audit and Certification of Preservation Processes and Repositories.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-881: Visual Analytics</h3>
+    <p>Introduction and overview of the course; Analytical Reasoning and Critical Thinking; Mental and Visualization Models; Data: Representations, Transformations, and Statistics; Visual Representations; Interaction; Communication: Production, Presentation, Dissemination; Sense Making; Collaborative Visual Analytics; Evaluation of VAST systems.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-882: Distributed Networks Analysis</h3>
+    <p>An overview of Distributed systems; Distribution system analysis and optimization tools used for network planning; simulation, and prediction of system response; Data communication; classification Issues - mutual exclusion, election, deadlock, termination, data transfer, consistency, Architectural models, design goals, services Protocols and technologies Characteristics; interface; software File and directory structures; sharing; recovery; concurrency Security (access, authentication, encryption); Representative systems; System management and scheduling; Distributed file systems; Transaction management and consistency models; Distributed synchronization; Distributed system security; performance analysis of distributed data networks; Advanced queuing models and Basic queuing networks.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-883: Network Performance Evaluation</h3>
+    <p>Computer and communication network modeling; System performance evaluation; Data Presentation in networks; Network data/information Monitors; Statistical analysis of network data; Selection of Techniques and Metrics for system analysis; Workloads/data/information Management; Workload/data Characterization Techniques; Data transfer Planning and Benchmarking; Simulation Tools for network traffic analysis; Queuing systems (M/M/1, M/M/c/k, M/G/1, Advanced queuing models and Basic queuing networks); Experiments and Group work; Evaluate and design networks and protocols; Investigate network management tools and techniques; Stochastic processes and Markov Model.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-885: Deep Learning on Graphs</h3>
+    <p>Introduction to Graphs; Introduction to Deep Learning; Algorithms for Node Embeddings (random walk based methods, deep learning based methods); Algorithms for Graph Embeddings; Graph Neural Networks (message passing framework, aggregation, deep learning); Graph Convolution Networks; Graph Attention Networks; Graph Autoencoders; Graph Transformers; Scaling GNNs; Applications of GNNs (node classification, link prediction, graph classification, community detection, etc.).</p>
+  </div>
+
+  <div class="info-card">
+    <h3>DSC-780: Thesis</h3>
+    <p>6 credit hours in html</p>
+  </div>
+
+  <h2>Deficiency Courses for Students from Non-Computing Backgrounds</h2>
+<section class="courses">
+  
+  <div class="info-card">
+    <h3>CS 105: Programming and Problem Solving</h3>
+    <p>Introduction to programming concepts and problem-solving strategies. Topics include data types, control structures, algorithms, and basic problem-solving techniques using programming languages.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>CS 211: Data Structures</h3>
+    <p>Introduction to data structures such as arrays, stacks, queues, linked lists, trees, and graphs. Emphasis on designing and implementing algorithms for efficient data manipulation.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>CS 225: Database Systems</h3>
+    <p>Fundamentals of database design, relational model, SQL, normalization, and query optimization. Practical approaches to managing and using databases for real-world applications.</p>
+  </div>
+
+</section>
+
+<p>Click <a href="https://qau.edu.pk/ms-information-sciences-technology/">here</a> to see details about the fee structure.</p>
+</section>
+</main>
+<footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column useful-links">
+          <h4>Useful links</h4>
+          <div>
+            <a href="http://www.qau.edu.pk/" target="QAU" class="footer-link">QAU</a>
+            <a href="admission.html" class="footer-link">Admissions</a>
+            <a href="contactUs.html" class="footer-link">Contact</a>
+          </div>
+          <address>
+            <strong>Department of Computer Sciences,</strong><br>
+            <strong>Quaid-i-Azam University,</strong><br>
+            Islamabad, 45320, Pakistan<br>
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+  
+        <div class="footer-column">
+          <h4>Our Programs</h4>
+          <ul class="footer-list">
+            <li><a href="Phd.html">PhD (Computer Science)</a></li>
+            <li><a href="ms.html">MS (Information Science &amp; Technology)</a></li>
+            <li><a href="mphil.html">MPhil (Computer Science)</a></li>
+            <li><a href="ms-ds.html">MS (Data Science)</a></li>
+            <li><a href="Bs.html">BS (Computer Science)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div id="foot">
+      <div class="container">
+        <p class="text-center">2025 &copy; Department of Computer Sciences, QAU, Islamabad</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

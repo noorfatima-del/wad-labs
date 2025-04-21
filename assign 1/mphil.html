@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QAU Computer Science Department</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9eaeb;
+    padding: 20px;
+    color: rgb(12, 12, 12);
+  }
+  
+  header .logo {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 1.2em;
+  }
+  
+  /* Navbar Styles */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0d1144;
+    padding: 10px;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-left a, .nav-right a {
+    color: rgb(212, 226, 218);
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-left a:hover, .nav-right a:hover {
+    background-color: #290c58;
+  }
+  /* Main Content */
+  .container {
+    padding: 20px;
+  }
+  
+  .page-header {
+    background: linear-gradient(120deg, #5a051f, #6b6757, #0a0552);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page-header h1, .page-header p {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+@media (min-width: 768px) {
+    .projects {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  /* Main Content Layout */
+main {
+    padding: 30px 20px;
+    background-color: #fff;
+    line-height: 1.7;
+    color: #222;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* Content Section */
+  .content-section {
+    margin-bottom: 40px;
+  }
+  
+  .content-section h2 {
+    color: #0d1144;
+    font-size: 28px;
+    margin-bottom: 10px;
+    border-left: 5px solid #5a051f;
+    padding-left: 15px;
+  }
+  
+  .content-section p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Info Cards */
+  .info-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid #6b6757;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .info-card h3 {
+    margin-top: 0;
+    color: #39085a;
+  }
+  
+  /* Contact Box */
+  .contact-box {
+    margin-top: 20px;
+    background-color: #f1f1f8;
+    padding: 15px 20px;
+    border-left: 4px solid #5e0c6b;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      padding: 20px 15px;
+    }
+  
+    .content-section h2 {
+      font-size: 24px;
+    }
+  
+    .info-card {
+      padding: 15px;
+    }
+  
+    .contact-box {
+      font-size: 14px;
+      padding: 12px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content-section h2 {
+      font-size: 20px;
+    }
+  
+    .content-section p {
+      font-size: 14px;
+    }
+  
+    .info-card h3 {
+      font-size: 16px;
+    }
+  }
+  .program-box {
+    background-color: #fff;
+    border-left: 5px solid #004466;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .program-box:hover {
+    transform: scale(1.01);
+  }
+  
+  .program-box h2 {
+    margin-top: 0;
+    color: #004466;
+  }
+  
+  .program-box h3 {
+    margin-top: 1.5rem;
+    color: #005577;
+  }
+  
+  .program-box ul {
+    padding-left: 1.5rem;
+  }
+  
+  .program-box li {
+    margin-bottom: 0.5rem;
+  }
+  /* Footer */
+  footer {
+    background: linear-gradient(120deg, #070555, #6b6757, #58064b);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .footer-column {
+    width: 45%;
+  }
+  
+  .footer-column h4 {
+    margin-top: 0;
+  }
+  
+  .footer-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .footer-list li {
+    margin: 5px 0;
+  }
+  
+  #foot p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .footer-column.useful-links {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000;
+  }
+  
+  .footer-column.useful-links a.footer-link {
+    display: inline-block;
+    background-color: #4d065c;
+    color: white;
+    padding: 6px 12px;
+    margin: 5px 8px 10px 0;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-column.useful-links a.footer-link:hover {
+    background-color: #58073d;
+  }
+</style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="container text-center">
+      <h1 class="animate-text">WELCOME TO THE</h1>
+      <h1 class="animate-text">Department of Computer Sciences</h1>
+      <p class="animate-subtext">Quaid-i-Azam University, Islamabad</p>
+    </div>
+  </header>
+
+<div class="navbar-container">
+  <nav class="nav-left">
+    <a href="homepage.html">Home</a>
+    <a href="academics.html">Academics</a>
+    <a href="fundedprojects.html">Funded Projects</a>
+    <a href="research.html">Research</a>
+    <a href="admission.html">Admissions</a>
+    <a href="faculty.html">Faculty</a>
+  </nav>
+
+  <nav class="nav-right">
+    <a href="https://gdsc.community.dev/quaid-i-azam-university/" target="QAU">Google GDSC</a>
+    <a href="http://jobs.qau.edu.pk/" target="QAU">Jobs</a>
+    <a href="http://alumni.cs.qau.edu.pk/" target="QAU">Alumni</a>
+    <a href="http://www.qau.edu.pk/" target="QAU">QAU</a>
+    
+  </nav>
+</div>
+
+<div>
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; color: #0d1144;">MPhil</h2>
+<p  style="font-family: 'Playfair Display', serif; font-size: 1.0rem; text-align: center; color: #0d1144;">Our faculty members challenge their students,
+    share insights gained through professional experience and communicate
+    the knowledge they've spent a lifetime acquiring.</p>
+    </div>
+    <section class="program-box">
+        
+        <h2>MPhil (Computer Science)</h2>
+        
+        <p>
+          The objective of the <strong>MPhil Computer Science</strong> programme is to train students to initiate research work. 
+          The duration of the MPhil programme is two years (4 semesters).
+        </p>
+        
+        <p>
+          MPhil is a 50 credit hour programme comprising 24 credit hours of course work and 26 credit hours of research work. 
+          Each course carries 3 credit hours. Students are required to complete 2 compulsory courses and choose 6 optional 
+          courses to fulfill the 24 credit hour coursework requirement. The courses are structured to expose students to research 
+          activities early in the programme, laying the foundation for their research work.
+        </p>
+      
+        <h3>Research Component</h3>
+        <p>
+          Students will register for a research topic in the 3rd semester and are expected to complete their research work by 
+          the end of the 4th semester. The research will culminate in the submission of a thesis.
+        </p>
+      
+        <ul>
+          <li><a href="Rules-MPhil.pdf">MPhil University Policy/Rules</a></li>
+          <li><a href="https://qau.edu.pk/mphil-programme-fee-structure/">Fee Structure</a></li>
+          <li><a href="admission.html">Details about Admissions</a></li>
+        </ul>
+      </section>
+
+    
+ 
+  
+  
+    </section>
+    <main>
+        <section class="content-section">
+          <h2>Compulsory course </h2>
+      
+          <div class="info-card">
+            <h3>CSC-702: Advanced Operating Systems</h3>
+            <p>
+              History and structure of Operating Systems; Inter-process communication (client-server, various flavors of RPC); Resource discovery, naming, and directory services; Group communication; Distributed synchronization (including distributed transactions); Scalable server design (including clusters); Distributed file systems; Distributed object systems; Distributed shared memory; Support for wide-area services; Support for mobile and disconnected services; Fault tolerance
+            </p>
+          </div>
+        </section>
+        <section class="content-section">
+          <h2>Optional Courses</h2>
+        
+          <div class="info-card">
+            <h3>CSC-601: Theory of Computation</h3>
+            <p>
+              Models of computations: partial recursive functions, Turing machines, alternative models of computing. Chomsky hierarchy of languages, Basic theory and limitations of computability. Reducibility & decidability, un-decidability, primitive & recursive functions, and Resource-bounded computational complexity, non-determinism, P, NP, NP-complete classes.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>CSC-604: Advanced Software Engineering</h3>
+            <p>
+              Consideration and use of engineering principles to design and implement cost-effective, reliable software; Current software requirements methodologies and design practices, documentation standards, software project management, verification and validation techniques, software security considerations and computer human interfaces; Agent based software engineering; Clean-room process model; Management and evolution; costing and estimation; legacy systems.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-611: Human and Information Interaction</h3>
+            <p>
+              Overview of the course and a brief history; Types and structures of information resources; Types and structures of vocabularies; Information Interaction in Search engines, Digital libraries; Search techniques and effectiveness; Advanced searching; Web search and the invisible web; Information seeking behaviour; User modelling; Mediation between search intermediaries and users; Evaluation of search sources and results; Result Presentation to users; Keeping up: sources for life-time learning.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-614: Software Quality Assurance and Testing</h3>
+            <p>
+              Basic Concepts and principles of Software Quality; Software Attributes; Quality in general; Quality in Software (Product Vs Process). How to Assure Quality; Software Quality Assurance Plan; Testing: Verification & Validation: Testing concepts; Testing principles; Inspections and Formal Technical Reviews: Reading Techniques; Automated Software Inspection; Testing Techniques: Black Box and White Box Testing Approaches; Manual Vs Automated Testing: Testing Tools; Test Plan creation and Test Case Generation; Test Development and Test Execution and Evaluation; Website and E-Business Quality and Testing Techniques.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-624: Requirements Engineering</h3>
+            <p>
+              The Requirements Elicitation Process: Joint Application Design, Prototyping, Requirements Inspections, Quality Function Deployment, Scenarios. Organizing and Analyzing the problem. Software Behaviour Specification: State-oriented, Function-oriented, Object-oriented. Formal Methods. Documentation for Software Requirements Specification. Specifying Non-behavioural Requirements. Refinement of Requirements into preliminary design.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-631: Web Services</h3>
+            <p>
+              Introduction to the course; foundational web technology and languages: mark-up languages; development frameworks; open source APIs for developing web services; comparison between service oriented architectures and web services; different aspects of web services and associated standards and specifications such as web services description languages; publishing; identification and discovery; services composition and orchestration; service bus; communication protocols and execution environments; web services management: performance, reliability and security.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>CSC-632: Advanced Web Development</h3>
+            <p>
+              Essentials of web development; JavaScript: basic concepts, synchronous and asynchronous programming, event loop, callback hells and promises; Server Side Scripting: Introduction, Backend architecture, REPL (Read-Eval-Print-Loop), server-side modules, synchronous and asynchronous CRUD (Create, Read, Update, Delete) operations; Data Handling; API Development: RESTful APIs, GraphQL, API testing; Middleware; Template engines; Databases: connecting backend with databases; Front-end Frameworks; Styling in frontend frameworks; State management; Frontend API access; Frontend state management.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-650: Web Science</h3>
+            <p>
+              Web history; Research methodology; Research practice in the Web; Conceptual framework for Web Models; Web in society; Information Society: Sociability; identity; trends; Collaboration; Communication: blogging, microblogging; Collective intelligence; Social structures & processes, Groups, identity, globalization, Social capital, power inequality, Virtual communities & politics;  Privacy & trust in the Web; Web & the Law; Web & Linguistics; Web & Life Sciences, Web and Psychology; Web Governance.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-651: Advanced Computer Architecture</h3>
+            <p>
+              Complex instruction set architectures, CISC and RISC Processor implementation, memory hierarchy, pipe-lining, Programming of high-performance supercomputers. Hardware, algorithms, numerical accuracy, compilers. Vector, multiple-instruction multiple-data-stream, and single-instruction single-data-stream machines. Benchmarking techniques. New developments related to single CPU systems.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-65X: Intelligent Information System</h3>
+            <p>
+              <!-- Course details are not provided. Add details here if available. -->
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-653: Natural Language Processing</h3>
+            <p>
+              Introduction to natural language processing, applications of NLP, regular expressions, regular expressions in NLP, text normalization, language modeling with n-grams, Naïve bayes classification and sentiment, POS tagging and HMM, Viterbi algorithm, CFGs and PCFGs, semantic analysis, text classification and evaluation, topic modeling, opinion mining, information extraction, named entity recognition, information retrieval, word sense disambiguation, question answering, dialog systems, Coreference resolution, text summarization, text alignment, language translation, latent semantic indexing, dimensionality reduction.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-654: Disciplined Software Processes</h3>
+            <p>
+              Course overview; Introduction to the PSP, PSP0; Planning overview Student workbook, PSP0.1; Size estimating; The PROBE method PSP1; Resource & schedule planning PSP1.1; 6A workshop; R4 report Software quality; Design & code reviews PSP2; Software design PSP2.1; Design Verification; Scaling up the PSP & TSP Overview; R5 report;
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-660: Research Methods</h3>
+            <p>
+              Overview of computer science sub-areas, Introduction to research methods. The objectives and dimensions of research. Tools of research. Key research areas of interest. The research problems: Finding a problem, stating the problem, identifying sub-problems. Review of related literature: Survey paper presentation. Planning the research project. The scientific method, Research planning, Data analysis and Statistical Methods. Conducting research in computer science. Proposal presentation. Research methodology: Quantitative and qualitative approach.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>CSC-664: Knowledge Management for Software Engineering</h3>
+            <p>
+              Knowledge Management and tools supporting KM; The social construction of knowledge; Organizational memory and organizational learning techniques; Case-based and knowledge-based approaches to knowledge management; Software reuse and the "Domain Lifecycle"; Software process methodologies; Use of usability guidelines in the software development process; Domain-Oriented Design Environments; Metrics and assessment techniques.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-665: Cloud Computing</h3>
+            <p>
+              <!-- Details not provided. -->
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-667: Wireless Sensor Networks</h3>
+            <p>
+              <!-- Details not provided. -->
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-668: Advanced Computer Networks</h3>
+            <p>
+              <!-- Details not provided. -->
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-671: Theory of Programming Languages</h3>
+            <p>
+              Classical formal methods: Formal specification and program correctness, Axiomatic proof systems (both Floyd-Hoare and Dijkstra's predicate transformers), Mills' functional correctness approach, abstract data types (both abstract model and algebraic specifications), and Scott-style denotational semantics based on least fixed points; Modern methods: Cleanroom, Model checking, Z, VDM; Case studies of formal methods in practice: PVS, Cleanroom use at IBM and NASA, Ariane 5, others.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-672: Data Compression</h3>
+            <p>
+              Document databases, Information Theory fundamentals: entropy, information, channels; Compression models: static and adaptive; Arithmetic coding; Context modeling, PPM; Dictionary techniques (Ziv-Lempel variants); Synchronization, performance; Indexing and compression, signature files, bitmaps; Lexicon structures, perfect hashing; Querying: Access structures, string matching, ranking, cosine measures; Index construction; Bilevel image compression, JBIG, JPEG-LS; Lossy image compression, JPEG; Q-Coder and vector quantization.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-673: Multimedia Technology</h3>
+            <p>
+              Multimedia: Image acquisition and manipulation; Still Imaging; 3D & Animation: Moving image creation and manipulation; Video: acquisition and manipulation; Audio: acquisition and manipulation; Multimedia Platforms: Unix/SG, PC, Mac, Linux; Convergence, Internet & Interactive Media; Technical Issues and future trends.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-674: Advanced Human-Computer Interaction</h3>
+            <p>
+              Introduction to the Course, Usability Issues of Interactive Systems; Interface Styles for diverse media types; Interaction Design Techniques and Tools; New and Emerging HCI Concepts; Role of HCI in the development of new and emerging technologies; Intelligent User Interfaces; Interfaces for Mobile Devices; HCI and Ubiquitous Computing; HCI and Computer Supported Cooperative Work; HCI and Agents; HCI and Information Exploration; HCI and Digital Libraries; HCI for Elderly and Children; Ethical and Social Issues surrounding HCI.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-675: Information Retrieval Systems</h3>
+            <p>
+              Structure of IR Systems; Vector Space Models; Language Models; Evidence from Behavior; Evidence from Metadata; User Interaction; Indexing; Cross-Language Retrieval; Document Image Retrieval; Speech and Music retrieval; Photograph and Video Retrieval.
+            </p>
+          </div>
+        
+          <div class="info-card">
+            <h3>CSC-677: World Wide Web and Society</h3>
+            <p>
+              Introduction and Overview of the course. The Internet Revolution. Placing Technologies in Perspectives. World Wide Web, Social Web. Mobile Web. Relationships on the Internet. Collaboration and Communication in Online Spaces. Blogging; microblogging. Gaming; photo/file sharing. Digital Authority and Knowledge. Digital Divide. Democracy & Politics. Privacy. Censorship. Groups and Technologies of Mediation. Networked Community. Copyright; Creative commons.
+            </p>
+          </div>        
+          
+  <div class="info-card">
+    <h3>CSC-714: Software Architectures</h3>
+    <p>
+      Overview of software engineering principles; Origins of Software Architectures; Introduction to Software Architectures; Scope of Software Architectures: Canonical Case Studies; Software Architectures: People and Teams; Architecture Description Languages (ADL); ADL Examples; Domain-Specific Software Architectures (DSSA); Architectural Styles; Software Connectors; Dynamism in Software Architectures; Architecture-Based Testing and Analysis; From Architecture to Design, Role of UML; From Architecture to Implementation; Middleware - CORBA; Software Interconnection Technologies; Middleware - JavaBeans and Enterprise JavaBeans; Middleware - COM/DCOM.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-724: Software Patterns</h3>
+    <p>
+      Overview of software patterns. Introduction to frameworks and relation to software patterns. Patterns during the development process, Design patterns: creational, structural, behavioral, Architectural patterns: pipes and filters, data repository, layered, call and return: HCI patterns, Re-engineering patterns, Refactoring, Antipatterns, organizational patterns, analysis patterns.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-741: Computer Vision</h3>
+    <p>
+      Computer vision, geometric primitives and 2D transformations, image processing and filtering, Camera model, Convolution, feature detection, matching, model fitting, object recognition, supervised learning, linear classifiers, neural networks and convolution neural network, their applications in object detection and localization, stereo, optical flow and tracking.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-751: Distributed Systems</h3>
+    <p>
+      Introduction to Distributed Systems; Communication, Processes; Naming; Synchronization; Consistency and replication; Fault tolerance; CORBA platform; .NET platform; Distributed File Systems; Distributed coordination-based systems; Distribution in WWW.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-752: Network Performance Evaluation</h3>
+    <p>
+      <!-- Details not provided. -->
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-771: Design and Analysis of Programming Languages</h3>
+    <p>
+      Course Overview and Motivation; A Simple Language of Arithmetic Expressions; A Simple Imperative Language. Operational Semantics; Proof Techniques for Operational Semantics; Intro to Denotational Semantics and Domain Theory; Intro to Axiomatic Semantics; Verification Conditions; Abstract Interpretation Lambda Calculus and Functional Programming; Simply Typed Lambda Calculus; Monomorphic Type Systems; Recursive Types, Subtyping; Polymorphism; Calculi for Concurrency: Pi Calculus; Calculi for Object-Oriented Languages; A Formalization of the Java Virtual Machine.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-772: Data Mining</h3>
+    <p>
+      The data mining process, Data preprocessing: Cleaning, Transformation, Reduction. Data warehousing: Multidimensional data modeling, OLAP. Classification: Bayesian, Decision tree. Prediction, Mining association rules: Association rules and types, Interestingness measures, multidimensional rules, Apriori algorithm. Cluster analysis: Partitional, Hierarchical, Density based. Mining complex data.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-773: Semantic Web</h3>
+    <p>
+      Introduction to Semantic Web, its vision and architecture; Resource Description Framework (RDF); RDF Semantics (RDFS), Web Ontology Language (OWL); First order logic; Description Logics, Ontology Reasoning; Semantic Web Query Languages; Semantic Web Services; Semantic Web Challenges (Ontology Merging, Alignment, Versioning, etc.); Research Trends in Semantic Web.
+    </p>
+  </div>
+  <div class="info-card">
+    <h3>CSC-774: HCI Models and Theories</h3>
+    <p>
+      HCI models and theories: Human performance, Interaction models, Task models, Group interaction models; Observing users: Ethnographic techniques; Empirical evaluation: Experimental design, Data collection, Data interpretation.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-775: Digital Libraries</h3>
+    <p>
+      Introduction to digital libraries; A brief history of Digital Library development; Planning a Digital Library; Presenting documents; Digital Document Formats: Markup and Metadata; Metadata standards; Interoperability; Digital Preservation, new media; Case Studies of Digital Libraries; Research Issues in Digital Libraries.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-776: Enterprise Architecture</h3>
+    <p>
+      Enterprise vision and objectives, Enterprise architecture principles and purpose; modeling approaches for enterprise architecture definition and communication; key enterprise architecture approaches, standards, and frameworks; Overview and use of Service Oriented Architecture (SOA), business architectures, data and information architectures, application & security architectures, Technical architectures, Middleware: CORBA, .Net, DCOM, EJB.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-778: Ontology Design and Development</h3>
+    <p>
+      Overview of ontologies; Ontology categorizations; Modeling ontologies; Ontology building methodologies; Ontology tools; Ontology design patterns; Ontology languages; Knowledge discovery for ontology construction; Role of annotations and Web in ontology development; Ontology evaluation; Ontology reuse: Ontology mediation, merging, alignment, integration; Ontology evolution.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-77X: Computational Intelligence</h3>
+    <p>
+      Introduction to computational intelligence, Evolutionary Computation (Genetic Algorithm, Genetic Programming, Evolutionary Strategies, Differential Evolution, Cultural Evolution, Co-evolution), Swarm Intelligence (Particle Swarm Optimization, Ant Colony Optimization), Fuzzy Set Theory (Fuzzy Systems, Fuzzy Inference Systems, Fuzzy Controllers, Rough Sets), Artificial Neural Networks, and hybridization of computational intelligence algorithms.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-781: Content Based Information Retrieval</h3>
+    <p>
+      Introduction to multimedia content (text, audio, image, and video objects); multiple modalities of information (textual, acoustic, visual); web and multimedia contents; indexing and retrieval of various types of multimedia content; content descriptors and feature sets; multimedia content modeling; structured and semi-structured data models; content-based indexing and retrieval models; CBIR architectures; multimedia information retrieval and ranking; content-based web search; CBIR evaluation; emerging trends in CBIR.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-815: Neural Information Retrieval</h3>
+    <p>
+      Information retrieval fundamentals; evaluation; word embeddings (Word2Vec, FastText); query expansion; patent retrieval; neural networks in NLP; CNNs and RNNs for sequence modeling; encoder-decoder architectures; attention mechanisms; Transformer and BERT: architecture, positional encoding, masked language modeling; Neural re-ranking: KNRM, convolutional KNRM; Transformer-based re-ranking (PreTTR, ColBERT, TK ranking, TKL, IDCM); dense retrieval models and lifecycle; BERTDOT; nearest neighbour search (GPU, approximate); knowledge distillation (DistilBERT); and deep learning-based recommender systems.
+    </p>
+  </div>
+  <div class="info-card">
+    <h3>CSC-816: Medical Image Analysis</h3>
+    <p>
+      Introduction to medical image analysis, medical imaging modalities, image acquisition techniques: MRI, CT, ultrasound, X-ray, challenges and characteristics of medical image data, role of medical image analysis in healthcare and medical research, medical image preprocessing, image denoising and artifact correction techniques, image enhancement methods, image segmentation in medical images, feature extraction and representation, image registration and fusion, classification and diagnosis, machine learning and deep learning approaches for medical image classification and diagnosis, computer-aided diagnosis (CAD) systems in medical imaging and performance measures.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-817: Transfer Learning and Applications</h3>
+    <p>
+      Overview of machine learning and deep learning, neural networks and optimization algorithms, Introduction to Transfer Learning and pretrained models, evaluation and model selection, Feature extraction using pretrained models, Techniques for fine-tuning pretrained models, Unsupervised domain adaptation and self-supervised learning, multi-task learning and applications, Big Transforms, Vision Transforms, Transfer learning in computer vision, Challenges and considerations in transfer learning for computer vision tasks, Transfer Learning in Natural Language Processing (NLP), Fine-tuning pretrained language models for various NLP tasks, Applications of transfer learning in sentiment analysis, text generation, and question answering, Meta-learning and few-shot learning, Lifelong learning.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-818: Advanced Computer Vision</h3>
+    <p>
+      Advanced Image Processing Techniques, Image enhancement: multi-scale processing, contrast enhancement, Edge detection, Image restoration, Feature Extraction and Description, Matching and alignment of image features, Image Segmentation, Semantic Segmentation, Object detection with CNNs, Transfer learning and fine-tuning pre-trained models, 3D object recognition and pose estimation, Video Analysis and Tracking, Generative Adversarial Networks (GANs) for image generation and style transfer, Attention mechanisms in computer vision, Visual understanding in specific domains: robotics, medical imaging, autonomous vehicles.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-819: Machine Learning for Software Engineering</h3>
+    <p>
+      Representation of problem and ML/DL models for Software Engineering tasks related to the following: Requirements Engineering (e.g. requirement tracing, requirement prioritization, requirement assessment), Design and Modeling (e.g. design pattern detection, software modeling, architecture evaluation), Implementation (e.g. code smell detection, code summarization, code comment management), Defect Analysis (e.g defect localization, defect categorization, defect cause analysis), Project management (e.g. software effort estimation, software crowdsourcing recommendations), evaluation approaches and measures, embedding techniques and pre-trained models for software, factors in selection of ML/DL, challenges in application of ML for SE, future research directions.
+    </p>
+  </div>
+  <h2>Advanced Computer Science Topics</h2>
+
+  <div class="info-card">
+    <h3>CSC-821: Design for Usability</h3>
+    <p>
+      Principles for designing the product; Development process for user interaction; Usability specifications; Design representation techniques; Prototyping; Formative user-based evaluation; Usability methods; User interaction development process.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-822: Modeling of Web Information Systems</h3>
+    <p>
+      Web modeling concepts; Modeling the Web applications for requirements engineering; Content modelling; Navigation modeling (Hypertext, Access structure); Modeling the presentation for the end user; Model driven development and model driven architecture; Evolution of the Web, Web 1.0 (visual Web), Web 2.0 (Social Web), and Semantic Web (the Web of metadata); Hypertext patterns; Persistence of HT patterns; O&M of Web applications.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-823: Data Warehousing</h3>
+    <p>
+      Overview of the course and a brief history; Data Warehouse Architecture; Extract Transform Load; Data Cleansing Algorithms; Hot and Cold Data; Data Warehouse support for OLAP and Data Mining; Active Data warehousing; Semantic Data warehousing; Oracle solution, TeraData solution; Case Studies.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-824: Peer-To-Peer Systems</h3>
+    <p>
+      Overview of P2P Systems and brief history; Taxonomy of P2P Networks/Systems and Analysis of popular P2P Systems; Analysis of unstructured P2P Systems; Analysis of structured P2P Systems; Search Efficiency; P2P-based content delivery; Security and Reliability; Replication in peer-to-peer systems; Anonymity in peer-to-peer systems; Social, Legal and Privacy aspects of P2P Systems.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-825: Machine Learning</h3>
+    <p>
+      Introduction: Overview of machine learning, Machine learning applications and examples, inductive learning, inductive bias; Decision tree learning: Representation, algorithm, hypothesis space, rule extraction, pruning; Neural networks: Representation, perceptrons, multilayer networks, backpropagation algorithm, Training procedures; Bayesian learning: Bayes theorem, maximum likelihood hypothesis, Bayes classifiers, Baysian belief networks; Instance-based learning: K-nearest neighbours, lazy and eager learning; Evaluating Hypothesis: Hypothesis accuracy, sampling theory, hypothesis testing; Computational learning theory: Probably learning an approximately correct hypothesis, sample complexity for finite and infinite hypothesis, VC dimension; Unsupervised learning: Clustering, types, steps.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-826: Pattern Recognition</h3>
+    <p>
+      Introduction: Overview of pattern recognition, review of matrix algebra, probability distributions and probability; Bayesian Decision Theory: Classifiers, discriminant functions and decision surfaces, normal density and discriminant functions for normal density, error bounds for normal densities; Bayesian Parameter Estimation: Univariate and Multivariate cases for the Gaussian distribution, bias, class-conditional densities; Maximum Likelihood Estimation: The general principle, Unknown parameter cases for Gaussian distribution; Problems of dimensionality: Accuracy and training sample size, computational complexity, overfitting; Component Analysis: Principle Component Analysis, Fisher Linear discriminant; Non-Parametric Techniques: Parzen windows, K-Nearest neighbour rule and estimation.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-827: Social Network Analysis</h3>
+    <p>
+      Introduction to social networks, random network models, identifying connected components, giant component, average shortest path, diameter, preferential attachment, network centrality, betweenness, closeness, clustering, community structure, modularity, overlapping communities, small world network models, contagion, opinion formation, applications of social network analysis, social media networks.
+    </p>
+  </div>
+  <div class="info-card">
+    <h3>CSC-832: Metadata for Information Resources</h3>
+    <p>
+      Overview of the course and Metadata; History of schemes and metadata communities; Functions and Types of metadata; Metadata Structure and Characteristics: Semantics, syntax, and structure; Metadata creation process models; Interoperability; Metadata Integration and Architecture: Warwick Framework; Resource Description Framework; Open Archives Initiative; Encoding Standards (Markup Languages): Introduction and history of markup; Metadata use of markup languages; Document Type Definitions (DTD); Structural metadata Data Control Standards: Resource Identifiers; Data Registries; Controlled vocabularies; Name authority control (ISAAR and FRANAR); A-Core; Encoded Archival Description (EAD), Text Encoding Initiative (TEI); Metadata Evaluation: User needs; Quality control issues; Evaluation methods; Educational Metadata: Instructional Management Systems (IMS); Learning Object Metadata (LOM); Gateway to Educational Materials (GEM); Government Information Locator Service (GILS); Visual Resources Metadata: Categories for the Description of Works of Art (CDWA); Visual Resources Association (VRA) Core; Computer Interchange of Museum Information (CIMI).
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-833: Information Privacy and Access Control</h3>
+    <p>
+      Privacy, Privacy policies; Privacy enforcement; Adaptive privacy management; Access control mechanisms; Different access control models such as Mandatory, Discretionary, Role-Based and Activity-Based; Access control matrix model; Harrison-Russo-Ullman model and undecidability of security; Confidentiality models such as Bell-LaPadula; Integrity models such as Biba and Clark-Wilson; Conflict of interest models such as the Chinese Wall.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-834: Multimedia Communications</h3>
+    <p>
+      Introduction and Recent history of multimedia technologies; Digital Image, Video and Audio Compression in Multimedia Communications; Networking Technology for Multimedia; Multimedia and the Internet; IETF Standard Protocols for Multimedia Transport; Multimedia Synchronization; Quality of Service (QoS) and Resource Management for Multimedia; Research Challenges in Real-time Multimedia transport; Multimedia conferencing and collaboration tools; Multimedia Security.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-835: Ubiquitous Information Interaction</h3>
+    <p>
+      Information Interaction; Seminal ideas of ubiquitous computing; Tangibility and Embodiment; Social computing; Privacy; Critical and cultural perspectives; Mobility and Spatiality; Mobile Technology in the Messy Now; Infrastructure; Seams, seamlessness, seamfulness; Evaluating Interaction of Ubicomp systems.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-836: Search Spaces Discovery</h3>
+    <p>
+      Information needs; information seeking behavior; search types: lookup, exploratory, and leisure-oriented search; information search process; search patterns; Multimedia information retrieval types; information retrieval interaction; nonlinear and multimodal data models; search results spaces; information exploration services; taxonomy of discovery; information discovery theories and models; search and discovery services; search results discovery scenarios; user studies; search results discovery evaluation.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-837: Multimodal User Interfaces</h3>
+    <p>
+      Classical interaction models and paradigms; human cognitive models and interactions; multimodal interaction myths; multimodal inputs/outputs and processing; information dimensions and multimodalities; multimedia input/output systems; multimodal interaction patterns; multimodal interfaces classification; user-centered multimodal interfaces and interaction; virtual reality and augmented reality interfaces; multimodal search user interfaces; design guidelines, user studies; multimodal interface evaluation.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-838: Recommender Systems</h3>
+    <p>
+      Introduction to recommender systems; Collaborative recommendation; Content-based recommendation; Knowledge-based recommendation; Hybrid recommendation approaches; Evaluating recommender systems; Recommender systems and the next-generation web; Group Recommender Systems; Trust-Aware Recommender Systems; Social Recommender Systems; Time and Location Sensitive Recommender Systems, Cross-Domain Recommender Systems, Multi-Criteria Recommender Systems; Advanced topics in recommender systems.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-839: Information Cryptography</h3>
+    <p>
+      Introduction to Nondeterministic and deterministic cryptography, Computationally secure encryption, Asymptotic ciphers, Computational Indistinguishability, Symmetric multi-party computation, Searchable encryption, Secure multiparty computation, Oblivious data transfer, Shannon perfect security, Linear and Nonlinear feedback shift registers, Block ciphers structures, Design and analysis of block ciphers primitives, Design and analysis of stream cipher primitives, Design and analysis of collision resistant hashing algorithms, Differential and Linear Cryptanalysis, Attacks on block ciphers, Attacks on stream ciphers, Partitioning cryptanalysis, Brute-force attacks, Plaintext attacks, Man in middle attack, Chosen plaintext attack, Known key attack, Ciphertext-only attack, Non-deterministic and deterministic random bit generator, Statistical randomness evaluation, Key generation, Key distribution centre, Factorization of polynomials, Gröbner basis algorithms, Shor's basis algorithm, Digital signature standard, Merkle–Hellman knapsack cryptosystem, Public key exchange, Zero-Knowledge Cave, Certification authorities.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-842: Research in Social Computing</h3>
+    <p>
+      Introduction to social computing – goals, challenges, and recent research; social computing platforms – blogging, social networking, professional social computing platforms; collecting social computing data – Application Programming Interfaces (APIs), crawling, online surveys, benchmarks; research methods in social computing – descriptive methods, predictive methods, geospatial methods; qualitative research methods for social computing – focused groups, interviews, semiotics, opinion mining; spatial analysis methods – spatial interpolation, spatial regression, spatial visualization; temporal analysis methods – temporal data representation, analyzing time series data, prediction and grouping in temporal data; network-science based methods – graphs, nodes, edges, centrality measures, community detection.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-843: Advanced Information Retrieval Techniques</h3>
+    <p>
+      Information Retrieval, Boolean Retrieval Model and Query Processing, Phrase Queries and Positional Queries, Ranked Retrieval Models: Motivation, Jaccard Coefficient, Log Frequency Weighting, TFIDF, SMART, Cosine Similarity Measures, Evaluating Search Engines, TF Transformation and BM25, BM25F and BM25+, Evaluation Measures: Precision, Recall, F-Measure, Average Precision, MAP and gMAP, Mean Reciprocal Rank, nDCG, Kappa Measure, Index Compression: RCV-1 Statistics, Dictionary Compression, Postings Compression, Text Classification, Naïve Bayesian, Probabilistic Retrieval Model, Probabilistic Language Modelling, N-gram language modelling, Feedback in text retrieval, Feedback in Vector Space Model, Link analysis and Page Rank, Recommender Systems: Content Based Recommendation and Collaborative Filtering.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-845: Deep Learning</h3>
+    <p>
+      Review of Neural Networks, activation functions & back-propagation; multilayer neural nets, deep networks, learning algorithms, Convolutional Neural Networks: History, Convolution, Pooling, CNNs for classification, CNN Architectures; Sequence Modeling: Recurrent and Recursive Nets: Long-Short Term Memory models and variants, Language modeling and image captioning, Unsupervised learning: Restricted Boltzmann Machines and Auto-encoders; Case Studies.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-846: Advanced Natural Language Processing</h3>
+    <p>
+      Introduction to NLP; Observations and Target Encoding; Tensors; Sequence Modeling; Constituency Grammars and Parsers; Dependency Parsing; Information Extraction; Machine Translation; Transformers; Natural Language Generation; Coreference Resolution; Integrating Knowledge in Language Models; Pretrained Language Models; Advanced topics in NLP.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>CSC-885: Deep Learning on Graphs</h3>
+    <p>
+      Introduction to Graphs; Introduction to Deep Learning; Algorithms for Node Embeddings (random walk based methods, deep learning based methods); Algorithms for Graph Embeddings; Graph Neural Networks (message passing framework, aggregation, deep learning); Graph Convolution Networks; Graph Attention Networks; Graph Autoencoders; Graph Transformers; Scaling GNNs; Applications of GNNs (node classification, link prediction, graph classification, community detection, etc.).
+    </p>
+  </div>
+
+
+   </ul>
+          </div>
+        </section>
+        <h2>Frequently Asked Questions (FAQs)</h2>
+<section class="program-box">
+  
+  <div class="faq-item">
+    <h3>When will MPhil admissions open?</h3>
+    <p>Admissions open in Fall semester for every academic year.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What is the eligibility criteria?</h3>
+    <p>MSc/ BS (4 years) in CS/SE/IT from the HEC recognized university.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What will be the format of MPhil admission test?</h3>
+    <p>Sample admission test is provided at <a href="http://qau.edu.pk/tests/CSC-mphil-test.pdf" target="_blank">http://qau.edu.pk/tests/CSC-mphil-test.pdf</a></p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What will be the duration of MPhil admission test?</h3>
+    <p>Duration of the admission test will be 90 to 120 minutes.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How can I apply for MPhil admission?</h3>
+    <p>You can apply online by visiting the university website: <a href="http://ugadmissions.qau.edu.pk/" target="_blank">http://ugadmissions.qau.edu.pk/</a></p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can I study part time for MPhil?</h3>
+    <p>No, it’s a full-time program, with most of the classes in the morning.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What is the fee structure?</h3>
+    <p>To know more about the fee structure, please visit: <a href="http://qau.edu.pk/mphil-programme-fee-structure" target="_blank">http://qau.edu.pk/mphil-programme-fee-structure</a></p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What is the duration/credit hours requirement of MPhil?</h3>
+    <p>MPhil is a two-year program of 50 credit hours, 24 credit hours are assigned for the course work and 26 credit hours are dedicated for research work.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What is the scheme of study?</h3>
+    <p>In order to know more about the scheme of study, <a href="#">click here</a></p>
+  </div>
+
+  <div class="faq-item">
+    <h3>From where can I see the faculty profiles?</h3>
+    <p>In order to know more about faculty profile, <a href="#">click here</a></p>
+  </div>
+
+  <div class="faq-item">
+    <h3>When is an MPhil supervisor assigned?</h3>
+    <p>MPhil supervisor is assigned after completion of course work (usually after two semesters).</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What is the future potential and professional growth after completing MPhil?</h3>
+    <p>Successful completion of MPhil at QAU opens many doors of professional positions both domestically and abroad in industry, academia and research.</p>
+  </div>
+
+</section>
+    </main>    
+       
+<footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column useful-links">
+          <h4>Useful links</h4>
+          <div>
+            <a href="http://www.qau.edu.pk/" target="QAU" class="footer-link">QAU</a>
+            <a href="admission.html" class="footer-link">Admissions</a>
+            <a href="contactUs.html" class="footer-link">Contact</a>
+          </div>
+          <address>
+            <strong>Department of Computer Sciences,</strong><br>
+            <strong>Quaid-i-Azam University,</strong><br>
+            Islamabad, 45320, Pakistan<br>
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+  
+        <div class="footer-column">
+          <h4>Our Programs</h4>
+          <ul class="footer-list">
+            <li><a href="Phd.html">PhD (Computer Science)</a></li>
+            <li><a href="ms.html">MS (Information Science &amp; Technology)</a></li>
+            <li><a href="mphil.html">MPhil (Computer Science)</a></li>
+            <li><a href="ms-ds.html">MS (Data Science)</a></li>
+            <li><a href="Bs.html">BS (Computer Science)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div id="foot">
+      <div class="container">
+        <p class="text-center">2025 &copy; Department of Computer Sciences, QAU, Islamabad</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+  

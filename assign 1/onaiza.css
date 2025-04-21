@@ -1,0 +1,20 @@
+.profile-container {
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .profile-links img {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .profile-container a {
+    color: #0d1144;
+    text-decoration: none;
+  }
+  
+  .profile-container a:hover {
+    text-decoration: underline;
+  }
+  
