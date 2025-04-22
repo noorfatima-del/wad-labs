@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab 6 - Part 1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-red-100">
+
+  <!-- FLEXBOX -->
+  <h1 class="text-6xl font-bold text-center text-black my-6 underline">EXPLORING FLEXBOX</h1>
+  <div class="flex flex-col items-center bg-white py-10">
+    <div class="flex flex-row items-center justify-center gap-4">
+      <div class="bg-pink-300 w-[200px] h-[200px] flex items-center justify-center text-xl font-semibold border">01</div>
+      <div class="bg-blue-200 w-[200px] h-[200px] flex items-center justify-center text-xl font-semibold border">02</div>
+      <div class="bg-red-400 w-[200px] h-[200px] flex items-center justify-center text-xl font-semibold border">03</div>
+    </div>
+  </div>
+
+  <!-- GRID LAYOUT -->
+  <h1 class="text-6xl font-bold text-center text-black my-6 underline">EXPLORING GRID LAYOUT</h1>
+  <div class="bg-white py-10 flex justify-center">
+    <div class="grid grid-cols-3 gap-4">
+      <div class="bg-pink-600 w-[200px] h-[200px] flex items-center justify-center text-xl font-semibold border">A</div>
+      <div class="bg-blue-200 w-[200px] h-[200px] flex items-center justify-center text-xl font-semibold border">B</div>
+      <div class="bg-red-400 w-[200px] h-[200px] flex items-center justify-center text-xl font-semibold border">C</div>
+      <div class="bg-rose-400 w-[200px] h-[200px] flex items-center justify-center text-xl font-semibold border">D</div>
+      <div class="bg-cyan-200 w-[200px] h-[200px] flex items-center justify-center text-xl font-semibold border">E</div>
+      <div class="bg-pink-900 w-[200px] h-[200px] flex items-center justify-center text-xl font-semibold border">F</div>
+    </div>
+  </div>
+
+  <!-- TEXT STYLING -->
+  <h1 class="text-6xl font-bold text-center text-black my-6 underline">EXPLORING TEXT STYLE</h1>
+  <div class="bg-white text-black px-10 py-6">
+    <h2 class="text-4xl font-semibold text-black leading-relaxed mb-4">Some Unique Flowers</h2>
+    <p class="text-2xl font-mono text-gray-800 leading-relaxed">
+      There are a lot of beautiful and unique flowers:
+      <ul class="list-disc list-inside mt-2">
+        <li>Abutilon</li>
+        <li>Acacia</li>
+        <li>Aconite</li>
+      </ul>
+    </p>
+  </div>
+
+  <!-- BACKGROUND AND BORDER -->
+  <h1 class="text-6xl font-bold text-center text-black my-6 underline">EXPLORING BACKGROUND</h1>
+  <div class="relative min-h-[500px] bg-pink-900">
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('flowers.jpeg')]"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-75"></div>
+    <div class="relative flex items-center justify-center h-full">
+      <div class="text-center text-white px-4">
+        <h2 class="text-6xl font-bold mb-4">BEAUTY OF FLOWERS</h2>
+        <p class="text-xl text-black mb-6">Fill your life with beautiful flowers</p>
+        <a href="#explore" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded uppercase font-semibold">
+          Explore Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <h1 class="text-6xl font-bold text-center text-black my-6 underline">EXPLORING TABLE</h1>
+  <div class="flex justify-center bg-white py-10">
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white rounded-xl shadow-md overflow-hidden">
+        <thead class="bg-blue-600 text-white">
+          <tr>
+            <th class="text-left text-sm uppercase font-semibold px-6 py-4">Name</th>
+            <th class="text-left text-sm uppercase font-semibold px-6 py-4">Age</th>
+            <th class="text-left text-sm uppercase font-semibold px-6 py-4">City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="even:bg-white hover:bg-gray-200 transition">
+            <td class="px-8 py-2 text-sm">Ali</td>
+            <td class="px-8 py-2 text-sm">21</td>
+            <td class="px-8 py-2 text-sm">Islamabad</td>
+          </tr>
+          <tr class="even:bg-white hover:bg-gray-200 transition">
+            <td class="px-8 py-2 text-sm">Zara</td>
+            <td class="px-8 py-2 text-sm">20</td>
+            <td class="px-8 py-2 text-sm">Barakahu</td>
+          </tr>
+          <tr class="even:bg-white hover:bg-gray-200 transition">
+            <td class="px-8 py-2 text-sm">Sara</td>
+            <td class="px-8 py-2 text-sm">22</td>
+            <td class="px-8 py-2 text-sm">Lahore</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- HOVER EFFECT -->
+  <h1 class="text-6xl font-bold text-center text-black my-6 underline">EXPLORING HOVER EFFECT</h1>
+  <div class="flex justify-center bg-white py-10">
+    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+      Hover Me
+    </button>
+  </div>
+
+  <!-- CUSTOM VALUES -->
+  <h1 class="text-6xl font-bold text-center text-black my-6 underline">EXPLORING CUSTOM VALUES</h1>
+  <div class="flex justify-center bg-white py-10">
+    <div class="text-[#e91e63] bg-gray-100 text-lg p-6 rounded shadow-md" style="width: 370px;">
+      This box has a custom width (370px) and custom text color (#e91e63).
+    </div>
+  </div>
+
+  <!-- COMBINED STYLES -->
+  <h1 class="text-6xl font-bold text-center text-black my-6 underline">EXPLORING COMBINED STYLES</h1>
+  <div class="flex justify-center items-center bg-gray-100 hover:bg-gray-300 p-8 transition duration-300 min-h-[200px]">
+    <p class="text-center text-xl font-medium text-gray-800">
+      Centered box with padding and hover background change
+    </p>
+  </div>
+
+</body>
+</html>

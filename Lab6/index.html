@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeMuse | Lab Task</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    [data-aos] {
+      opacity: 0;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    [data-aos].aos-animate {
+      opacity: 1;
+      transform: none;
+    }
+    [data-aos="fade-up"] {
+      transform: translateY(20px);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans transition-colors duration-300">
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="Logo" class="h-16 w-16 object-contain rounded-full bg-white p-1" />
+        <h1 class="text-2xl font-bold">CodeMuse</h1>
+      </div>
+      <nav class="space-x-6">
+        <a href="#main-content" class="text-white hover:text-blue-300 font-medium">Articles</a>
+        <a href="#profile" class="text-white hover:text-blue-300 font-medium">About</a>
+        <a href="#footer" class="text-white hover:text-blue-300 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <!-- Main Content -->
+  <main id="main-content" class="py-16 px-6 max-w-4xl mx-auto">
+    <article>
+      <header class="mb-6">
+        <h2 class="text-4xl font-bold mb-2">Understanding Web Development</h2>
+        <p class="text-gray-500">Posted on March 13, 2025</p>
+      </header>
+      <div class="space-y-5 text-lg text-gray-700">
+        <p>
+          Web development is one of the exciting fields. It involves the creation and maintenance of websites and web applications using various programming languages such as Java, Python, and JavaScript.
+        </p>
+        <p>
+          Developers use these languages to write the software that powers the functionality and interactivity of a website, making it accessible both on desktop and mobile devices.
+        </p>
+        <p>
+          A Front-End Developer is someone who creates websites and web applications. The difference between Front-End and Back-End is that Front-End refers to how a web page looks, while Back-End refers to how it works.
+        </p>
+        <p>
+          The basic languages for Front-End Development are HTML, CSS, and JavaScript.
+        </p>
+        <ul class="list-disc list-inside ml-4">
+          <li><strong>Main responsibilities:</strong> User Interface</li>
+          <li>Client Software (Front-End)</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Popular frameworks/libraries: Bootstrap, W3.CSS, HTML DOM, JSON, XML, jQuery, Angular, React</li>
+          <li>API Handling: REST, GraphQL</li>
+          <li>Data formats: JSON, XML</li>
+          <li>Tools: Git</li>
+        </ul>
+        <p class="font-semibold">Key aspects of Web Development:</p>
+        <ul class="list-disc list-inside ml-4">
+          <li>Frontend Development</li>
+          <li>Backend Development</li>
+          <li>Database Management</li>
+        </ul>
+        <p>Main technologies used in web development: HTML, CSS, JavaScript, PHP.</p>
+        <figure class="mt-6">
+          <img src="webdevelopment.jpeg" alt="Web Development" class="w-full rounded-lg shadow-lg" />
+        </figure>
+      </div>
+    </article>
+  </main>
+
+  <!-- About Section -->
+  <aside id="profile" class="py-16 px-6 bg-gray-100">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+      <img src="profile.jpeg" alt="Profile" class="w-40 h-40 object-cover rounded-full shadow-md" />
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Noor Fatima</h3>
+        <p class="text-gray-700 mb-1">Web developer, love to do coding and designing.</p>
+        <p class="text-gray-600">Followers: <span class="font-semibold text-blue-600">100</span></p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025 CodeMuse, all rights reserved.</p>
+  </footer>
+
+</body>
+</html>

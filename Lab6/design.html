@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Section – Locomotive Inspired</title>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Custom Tailwind Config (e.g., font, colors) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Helvetica Neue', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-gray-950 text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center px-4 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+      Creative Digital Agency
+    </h1>
+    <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-xl">
+      We build immersive experiences and cutting-edge digital solutions for modern brands.
+    </p>
+    <a href="#" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+      Explore Our Work
+    </a>
+  </section>
+
+  <!-- Featured Projects Section -->
+<section class="py-20 bg-gray-900 text-white px-6">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        A selection of recent work that showcases our creativity, strategy, and development skills.
+      </p>
+    </div>
+  
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <!-- Project Card 1 -->
+      <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="e-com.jpg" alt="Project Image" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">E-Commerce Redesign</h3>
+          <p class="text-gray-400 text-sm">Revamped an online store with seamless UI and performance optimization.</p>
+        </div>
+      </div>
+  
+      <!-- Project Card 2 -->
+      <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="mobileapp.jpg" alt="Project Image" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Mobile App Experience</h3>
+          <p class="text-gray-400 text-sm">Crafted an intuitive app interface focused on productivity and design.</p>
+        </div>
+      </div>
+  
+      <!-- Project Card 3 -->
+      <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="brand.jpg" alt="Project Image" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Brand Identity</h3>
+          <p class="text-gray-400 text-sm">Developed a cohesive visual identity for a startup tech brand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-white text-gray-900 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
+        <p class="text-gray-700 mb-4">
+          We're a team of designers, developers, and strategists who create meaningful digital experiences. From concept to launch, we work closely with clients to bring their ideas to life.
+        </p>
+        <p class="text-gray-700">
+          Our mission is to blend creativity with cutting-edge technology to build products that truly stand out.
+        </p>
+      </div>
+    </section>
+</body>
+</html>
