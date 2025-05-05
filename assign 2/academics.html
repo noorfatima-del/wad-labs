@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>academics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    .animate-text {
+      @apply text-4xl font-bold animate-fadeSlideIn;
+    }
+    .animate-subtext {
+      @apply text-lg mt-2 text-gray-200 animate-fadeSlideIn;
+    }
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeSlideIn {
+      animation: fadeSlideIn 1.4s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-gradient-to-r from-red-900 via-gray-500 to-blue-900 text-white py-16 text-center">
+        <div class="container mx-auto">
+          <h1 class="animate-text font-[Playfair_Display]">WELCOME TO THE</h1>
+          <h1 class="animate-text font-[Playfair_Display]">Department of Computer Sciences</h1>
+          <p class="animate-subtext font-[Playfair_Display]">Quaid-i-Azam University, Islamabad</p>
+        </div>
+      </header>
+ 
+  <!-- Navbar -->
+  <div class="flex justify-between bg-[#0d1144] px-4 py-3">
+    <nav class="flex gap-4">
+      <a href="index.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Home</a>
+      <a href="academics.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Academics</a>
+      <a href="fundedprojects.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Funded Projects</a>
+      <a href="research.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Research</a>
+      <a href="admission.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Admissions</a>
+      <a href="faculty.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Faculty</a>
+    </nav>
+
+    <nav class="flex gap-4">
+      <a href="https://gdsc.community.dev/quaid-i-azam-university/" target="QAU" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Google GDSC</a>
+      <a href="http://jobs.qau.edu.pk/" target="QAU" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Jobs</a>
+      <a href="http://alumni.cs.qau.edu.pk/" target="QAU" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Alumni</a>
+      <a href="http://www.qau.edu.pk/" target="QAU" class="text-green-100 hover:bg-[#290c58] px-3 py-2">QAU</a>
+    </nav>
+  </div>
+  <div class="text-center py-8">
+    <h1 class="text-4xl text-blue-900 font-bold mb-2">ACADEMICS</h1>
+    <p class="text-base text-blue-900">The department offers PhD, MPhil, MS (IST), M.Sc. and BS degrees<br>
+        Each degree programme has a specific objective and focus.<br>
+        The course of study and syllabi for each degree is updated and is inline its objectives.</p>
+  </div>
+  <!-- Main Content -->
+  <div class="w-[90%] mx-auto my-8">
+    <h1 class="text-3xl font-bold mb-6">Academics</h1>
+
+    <!-- PhD -->
+    <div class="flex flex-wrap mb-6">
+      <div class="w-full md:w-1/2 p-2">
+        <img src="phd.png" alt="PhD" class="h-24 object-contain">
+      </div>
+      <div class="w-full md:w-1/2 p-2">
+        <p>PhD is the highest degree awarded and the most rewarding academic experience. Students work closely with faculty, conducting original research and solving challenging problems.
+          <b><a href="Phd.html" class="text-blue-700 hover:underline">(More Details)</a></b>
+        </p>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- MPhil -->
+    <div class="flex flex-wrap mb-6">
+      <div class="w-full md:w-1/2 p-2">
+        <img src="mphil.png" alt="MPhil" class="h-24 object-contain">
+      </div>
+      <div class="w-full md:w-1/2 p-2">
+        <p>The M.Phil program trains students for research. It's a 2-year program with 50 credit hours: 24 for coursework and 26 for research. 
+          <b><a href="mphil.html" class="text-blue-700 hover:underline">(More Details)</a></b>
+        </p>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- MS IST -->
+    <div class="flex flex-wrap mb-6">
+      <div class="w-full md:w-1/2 p-2">
+        <img src="ms.png" alt="MS IST" class="h-24 object-contain">
+      </div>
+      <div class="w-full md:w-1/2 p-2">
+        <p>The MS in IST focuses on designing and developing IT solutions while understanding digital information, people, and technology.
+          <b><a href="ms.html" class="text-blue-700 hover:underline">(More Details)</a></b>
+        </p>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- MS Data Science -->
+    <div class="flex flex-wrap mb-6">
+      <div class="w-full md:w-1/2 p-2">
+        <img src="ms-ds.png" alt="MS Data Science" class="h-24 object-contain">
+      </div>
+      <div class="w-full md:w-1/2 p-2">
+        <p>The MS Data Science program equips students with data science tools like programming, analytics, visualization, and big data, preparing them for global markets or PhD
+          <b><a href="ms-ds.html" class="text-blue-700 hover:underline">(More Details)</a></b>
+        </p>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- BS Program -->
+    <div class="flex flex-wrap mb-6">
+      <div class="w-full md:w-1/2 p-2">
+        <img src="bs.png" alt="BS" class="h-24 object-contain">
+      </div>
+      <div class="w-full md:w-1/2 p-2">
+        <p>The BS program provides balanced knowledge in Computer Science. Students specialize in areas like:
+          <ul class="list-disc ml-5 mt-2">
+            <li>Artificial Intelligence</li>
+            <li>Software Engineering</li>
+            <li>Data Science</li>
+            <li>Human Centered Computing</li>
+            <li>Platform Based Development</li>
+            <li>Networks and Security</li>
+            <li>Information Management</li>
+          </ul>
+          <b><a href="Bs.html" class="text-blue-700 hover:underline">(More Details)</a></b>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-gradient-to-r from-blue-900 via-gray-600 to-purple-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="mb-6 md:mb-0">
+          <h4 class="text-lg font-semibold mb-3">Useful Links</h4>
+          <div class="flex flex-col space-y-1">
+            <a href="http://www.qau.edu.pk/" class="hover:underline">QAU</a>
+            <a href="admission.html" class="hover:underline">Admissions</a>
+            <a href="contactUs.html" class="hover:underline">Contact</a>
+          </div>
+          <address class="mt-4 text-sm">
+            <strong>Department of Computer Sciences,</strong><br>
+            <strong>Quaid-i-Azam University,</strong><br>
+            Islamabad, 45320, Pakistan<br>
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-3">Our Programs</h4>
+          <ul class="space-y-1">
+            <li><a href="Phd.html" class="hover:underline">PhD (Computer Science)</a></li>
+            <li><a href="ms.html" class="hover:underline">MS (Information Science & Technology)</a></li>
+            <li><a href="mphil.html" class="hover:underline">MPhil (Computer Science)</a></li>
+            <li><a href="ms-ds.html" class="hover:underline">MS (Data Science)</a></li>
+            <li><a href="Bs.html" class="hover:underline">BS (Computer Science)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-6 text-center text-sm">
+        <p>2025 &copy; Department of Computer Sciences, QAU, Islamabad</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>fundedprojects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+      .animate-text {
+        @apply text-4xl font-bold animate-fadeSlideIn;
+      }
+      .animate-subtext {
+        @apply text-lg mt-2 text-gray-200 animate-fadeSlideIn;
+      }
+      @keyframes fadeSlideIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeSlideIn {
+        animation: fadeSlideIn 1.4s ease-out forwards;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-gradient-to-r from-red-900 via-gray-500 to-blue-900 text-white py-16 text-center">
+        <div class="container mx-auto">
+          <h1 class="animate-text font-[Playfair_Display]">WELCOME TO THE</h1>
+          <h1 class="animate-text font-[Playfair_Display]">Department of Computer Sciences</h1>
+          <p class="animate-subtext font-[Playfair_Display]">Quaid-i-Azam University, Islamabad</p>
+        </div>
+      </header>
+       <!-- Navbar -->
+  <div class="flex justify-between bg-[#0d1144] px-4 py-3">
+    <nav class="flex gap-4">
+      <a href="index.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Home</a>
+      <a href="academics.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Academics</a>
+      <a href="fundedprojects.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Funded Projects</a>
+      <a href="research.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Research</a>
+      <a href="admission.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Admissions</a>
+      <a href="faculty.html" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Faculty</a>
+    </nav>
+
+    <nav class="flex gap-4">
+      <a href="https://gdsc.community.dev/quaid-i-azam-university/" target="QAU" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Google GDSC</a>
+      <a href="http://jobs.qau.edu.pk/" target="QAU" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Jobs</a>
+      <a href="http://alumni.cs.qau.edu.pk/" target="QAU" class="text-green-100 hover:bg-[#290c58] px-3 py-2">Alumni</a>
+      <a href="http://www.qau.edu.pk/" target="QAU" class="text-green-100 hover:bg-[#290c58] px-3 py-2">QAU</a>
+    </nav>
+  </div>
+  <div class="text-center py-8">
+    <h1 class="text-4xl text-blue-900 font-bold mb-2">Funded Projects</h1>
+    <p class="text-base text-blue-900">We are pleased to announce that the following multiple fundings have been received by the respected faculty members of the department.</p>
+  </div>
+
+    
+    <section class="map-section mt-8">
+      <h2 class="text-xl font-semibold text-center">Our Location</h2>
+      <div class="map-container my-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.5245379077924!2d73.13641911095718!3d33.74710887316193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfc11cee6b8217%3A0x42eb41cc49cd8656!2sDepartment%20of%20Natural%20Sciences!5e0!3m2!1sen!2s!4v1745176186934!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section class="program-box mt-8">
+      <h2 class="text-xl font-semibold text-center">Contact Information</h2>
+      <address class="text-center mt-4">
+        <strong class="text-lg">Quaid-i-Azam University, Islamabad</strong><br>
+        Department of Computer Science<br>
+        Islamabad 45320, Pakistan<br><br>
+
+        <strong class="text-lg">Email:</strong> <a href="mailto:cs@qau.edu.pk" class="text-blue-600">cs@qau.edu.pk</a><br>
+        <strong class="text-lg">Phone:</strong> <a href="tel:+925190642057" class="text-blue-600">+92-51-9064 2057</a>
+      </address>
+    </section>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-900 via-gray-600 to-purple-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="mb-6 md:mb-0">
+          <h4 class="text-lg font-semibold mb-3">Useful Links</h4>
+          <div class="flex flex-col space-y-1">
+            <a href="http://www.qau.edu.pk/" class="hover:underline">QAU</a>
+            <a href="admission.html" class="hover:underline">Admissions</a>
+            <a href="contactUs.html" class="hover:underline">Contact</a>
+          </div>
+          <address class="mt-4 text-sm">
+            <strong>Department of Computer Sciences,</strong><br>
+            <strong>Quaid-i-Azam University,</strong><br>
+            Islamabad, 45320, Pakistan<br>
+            Tel : +92 (051) 9064-2057
+          </address>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-3">Our Programs</h4>
+          <ul class="space-y-1">
+            <li><a href="Phd.html" class="hover:underline">PhD (Computer Science)</a></li>
+            <li><a href="ms.html" class="hover:underline">MS (Information Science & Technology)</a></li>
+            <li><a href="mphil.html" class="hover:underline">MPhil (Computer Science)</a></li>
+            <li><a href="ms-ds.html" class="hover:underline">MS (Data Science)</a></li>
+            <li><a href="Bs.html" class="hover:underline">BS (Computer Science)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-6 text-center text-sm">
+        <p>2025 &copy; Department of Computer Sciences, QAU, Islamabad</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
