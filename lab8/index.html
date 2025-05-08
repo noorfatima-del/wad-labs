@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+</head>
+<body>
+
+<script>
+    const table = document.createElement("table");
+    table.border = "1";
+    table.id = "cgpatable";
+
+    const headerRow = table.insertRow();
+    ["regno", "name", "cgpa"].forEach(text => { 
+        const th = document.createElement("th");
+        th.textContent = text; 
+        headerRow.appendChild(th); 
+    });
+
+    function adddata(regno, name, cgpa)
+     {
+        const row = table.insertRow();
+        row.insertCell().textContent = regno;
+        row.insertCell().textContent = name;   
+        row.insertCell().textContent = cgpa;
+    }
+
+    adddata("1", "ali", "3.4");
+    adddata("2", "hamza", "3.7");
+    adddata("3", "sara", "2.4");
+    adddata("4", "aliza", "2.0");
+    adddata(" ", " ", " ");
+
+    const avgButton = document.createElement("button");
+    avgButton.textContent = "Average CGPA";
+
+    const resultDiv = document.createElement("div");
+
+    avgButton.addEventListener("click", () => {
+        let sum = 0, count = 0;
+
+        for (let i = 1; i < table.rows.length; i++) {
+            const cgpaCell = table.rows[i].cells[2];
+            const value = parseFloat(cgpaCell.textContent);
+
+            if (!isNaN(value)) {
+                sum += value;
+                count++;
+            }
+        }
+
+        const average = count > 0 ? (sum / count).toFixed(2) : "N/A";
+        resultDiv.textContent = "Average CGPA: " + average;
+    });
+
+    document.body.appendChild(table);
+    document.body.appendChild(avgButton); 
+    document.body.appendChild(resultDiv); 
+</script>
+
+</body>
+</html>
